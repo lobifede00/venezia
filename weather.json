@@ -1,0 +1,38 @@
+{
+ "updated": "10 nov",
+ "note": "Temperature: iLMeteo.it (aggiornate il 9 novembre). Cielo: Centro Meteo Italiano e 3BMeteo. A 6–9 giorni di distanza le fonti non sono ancora d'accordo, soprattutto su martedì: ricontrollate il giorno prima.",
+ "days": [
+  {
+   "d": "Lun 16",
+   "ico": "⛅",
+   "min": 4,
+   "max": 11,
+   "sky": "Nuvoloso, piogge poco probabili",
+   "tip": "Giornata asciutta per il Canal Grande e il Campanile."
+  },
+  {
+   "d": "Mar 17",
+   "ico": "🌧️",
+   "min": 8,
+   "max": 11,
+   "sky": "Coperto, possibile pioggia",
+   "tip": "Portate l'ombrello: le fonti vanno da “coperto” a “pioggia moderata”. L'Arsenale è al coperto."
+  },
+  {
+   "d": "Mer 18",
+   "ico": "🌦️",
+   "min": 9,
+   "max": 12,
+   "sky": "Nubi e schiarite",
+   "tip": "Qualche pioggia possibile: in laguna fa più freddo, vestitevi a strati."
+  },
+  {
+   "d": "Gio 19",
+   "ico": "🌥️",
+   "min": 10,
+   "max": 13,
+   "sky": "Velato, pioggia leggera possibile",
+   "tip": "Il giorno più mite."
+  }
+ ]
+}
