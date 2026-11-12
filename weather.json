@@ -1,6 +1,6 @@
 {
  "updated": "12 nov, 07:00",
- "note": "Fonti: 3BMeteo (11 nov sera e 12 nov mattina), Centrometeo e Meteored (12 nov), Meteo & Radar (12 nov). Lunedì e martedì tutte danno pioggia; mercoledì 3BMeteo dà poco nuvoloso ma le altre pioggia debole (scelta la più prudente); giovedì solo Centrometeo arriva così lontano. Le maree del Centro Maree escono 2-3 giorni prima: ricontrollatele.",
+ "note": "Fonti: 3BMeteo (11 nov sera e 12 nov mattina), Centrometeo e Meteored (12 nov), Meteo & Radar (12 nov). Lunedì e martedì tutte danno pioggia; mercoledì 3BMeteo dà poco nuvoloso ma le altre pioggia debole (scelta la più prudente). Le maree del Centro Maree escono 2-3 giorni prima: ricontrollatele.",
  "days": [
   {
    "d": "Lun 16",
@@ -16,7 +16,7 @@
    "min": 7,
    "max": 11,
    "sky": "Nebbia al mattino, pioggia in serata",
-   "tip": "Visite all'aperto al mattino-pomeriggio; la sera tenete l'ombrello a portata."
+   "tip": "Giornata in laguna: al mattino nebbia sull'acqua, portate un k-way e l'ombrello per la sera."
   },
   {
    "d": "Mer 18",
@@ -24,15 +24,7 @@
    "min": 9,
    "max": 14,
    "sky": "Nuvoloso, pioggia debole a tratti",
-   "tip": "Fonti in disaccordo: vestitevi a strati e portate un k-way."
-  },
-  {
-   "d": "Gio 19",
-   "ico": "🌤️",
-   "min": 10,
-   "max": 15,
-   "sky": "Poco nuvoloso, probabilmente asciutto",
-   "tip": "Il giorno più mite e asciutto: ideale per una passeggiata alle Zattere."
+   "tip": "Fonti in disaccordo: k-way per i Giardini e un ombrello pieghevole nel bagaglio a mano."
   }
  ]
 }

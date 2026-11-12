@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Venezia">
-<title>Venezia · 16–19 novembre 2026</title>
+<title>Venezia · 16–18 novembre 2026</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -310,7 +310,7 @@ details.faq p{margin:8px 0 0;font-size:14px;color:#334}
     <div class="top-row">
       <div class="brand">
         <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#c9962b"/><path d="M6 25c4 0 6-3 14-3s10 3 14 3" stroke="#0f3b3f" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M9 25c3 4 19 4 22 0" fill="#0f3b3f"/><path d="M27 14l3-5M27 14c1 2 1 6 0 9" stroke="#0f3b3f" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M12 14h8v-3l-4-3-4 3z" fill="#0f3b3f"/></svg>
-        <div><h1>Venezia</h1><small>16 – 19 novembre 2026 · in due</small></div>
+        <div><h1>Venezia</h1><small>16 – 18 novembre 2026 · in due</small></div>
       </div>
       <div class="countdown" id="countdown">…</div>
     </div>
@@ -324,15 +324,15 @@ details.faq p{margin:8px 0 0;font-size:14px;color:#334}
         <h2 id="hero-title">Il vostro viaggio</h2>
         <p id="hero-sub">Treno in arrivo a Santa Lucia lunedì alle 11:14. Hotel Saturnia, a due passi da San Marco.</p>
         <div class="stats">
-          <div class="stat"><b>3 notti</b><span>16 → 19 nov</span></div>
+          <div class="stat"><b>2 notti</b><span>16 → 18 nov</span></div>
           <div class="stat"><b>~16:40</b><span>tramonto</span></div>
-          <div class="stat"><b>4–13 °C</b><span>previsti</span></div>
+          <div class="stat"><b id="hero-t">7–14 °C</b><span>previsti</span></div>
         </div>
       </div>
       <div class="card meteo">
-        <div class="meteo-head"><h3>Meteo dei vostri giorni</h3><span class="small muted" id="meteo-upd">previsioni del 9–10 nov</span></div>
+        <div class="meteo-head"><h3>Meteo dei vostri giorni</h3><span class="small muted" id="meteo-upd">aggiornato 12 nov, 07:00</span></div>
         <div class="meteo-grid" id="meteo-grid"></div>
-        <p class="small muted" id="meteo-note" style="margin:10px 0 8px">Temperature: iLMeteo.it (aggiornate il 9 novembre). Cielo: Centro Meteo Italiano e 3BMeteo. A 6–9 giorni di distanza le fonti non sono ancora d'accordo, soprattutto su martedì: ricontrollate il giorno prima.</p>
+        <p class="small muted" id="meteo-note" style="margin:10px 0 8px">Fonti: 3BMeteo (11 nov sera e 12 nov mattina), Centrometeo e Meteored (12 nov), Meteo &amp; Radar (12 nov). Lunedì e martedì tutte danno pioggia; mercoledì 3BMeteo dà poco nuvoloso ma le altre pioggia debole (scelta la più prudente). Le maree del Centro Maree escono 2-3 giorni prima: ricontrollatele.</p>
         <div class="row">
           <a class="btn go" href="https://www.meteoeradar.it/pagina-meteo/venedig/4366577" target="_blank" rel="noopener">🌡️ Meteo in tempo reale</a>
           <a class="btn map" href="https://www.ilmeteo.it/meteo/venezia/lungo-termine" target="_blank" rel="noopener">Previsioni 14 giorni</a>
@@ -357,7 +357,7 @@ details.faq p{margin:8px 0 0;font-size:14px;color:#334}
           <button data-layer="svc">🚻 Servizi</button>
           <button data-lines class="on">〰 Linee ▾</button>
           </div><div class="rowx days2">
-          <button class="day on" data-dayset="-1">Tutto</button><button class="day" data-dayset="0">Giro lun</button><button class="day" data-dayset="1">mar</button><button class="day" data-dayset="2">mer</button><button class="day" data-dayset="3">gio</button></div><div class="rowx lines-row" id="lines-row"></div>
+          <button class="day on" data-dayset="-1">Tutto</button><button class="day" data-dayset="0">Giro lun</button><button class="day" data-dayset="1">mar</button><button class="day" data-dayset="2">mer</button></div><div class="rowx lines-row" id="lines-row"></div>
         </div>
         <div class="map-msg" id="map-msg"></div>
         <div class="legend" id="legend"><i style="background:var(--laguna)"></i>Hotel<br><i style="background:var(--acqua)"></i>Da vedere<br><i style="background:var(--mattone)"></i>Mangiare<br><i style="background:var(--oro)"></i>Vaporetto<br><i style="background:#6b5b95"></i>Musei</div>
@@ -382,27 +382,26 @@ details.faq p{margin:8px 0 0;font-size:14px;color:#334}
         <table class="tk">
           <tr><td>Corsa singola (75 minuti)</td><td>€ 9,50</td></tr>
           <tr><td>Pass 24 ore</td><td>€ 25</td></tr>
-          <tr class="best"><td><b>Pass 48 ore ← consigliato</b></td><td>€ 35</td></tr>
-          <tr><td>Pass 72 ore</td><td>€ 45</td></tr>
+          <tr><td>Pass 48 ore</td><td>€ 35</td></tr>
+          <tr class="best"><td><b>Pass 72 ore ← consigliato</b></td><td>€ 45</td></tr>
           <tr><td>Pass 7 giorni</td><td>€ 65</td></tr>
         </table>
-        <div class="note small" style="margin-top:10px"><b>La combinazione più economica per voi: € 44,50 a testa</b><br>
-        ① <b>Lunedì</b>: una corsa singola (€ 9,50) dalla stazione all'hotel.<br>
-        ② <b>Martedì</b>: tutto a piedi, Biennale compresa (25 minuti sulla Riva degli Schiavoni).<br>
-        ③ <b>Mercoledì mattina</b>: convalidate il <b>pass 48 ore</b> (€ 35) alla prima corsa. Copre Burano, Murano, il rientro e anche il viaggio verso la stazione giovedì, perché scade venerdì mattina.</div>
-        <p class="small" style="margin:10px 0 0">Se martedì preferite il vaporetto, prendete invece il <b>pass 72 ore</b> (€ 45) convalidandolo martedì mattina: totale € 54,50. Ricordate di <b>convalidare ogni volta</b> che salite, appoggiando la tessera al lettore sul pontile.</p>
+        <div class="note small" style="margin-top:10px"><b>Per voi: pass 72 ore, € 45 a testa</b><br>
+        Convalidatelo lunedì alle 11 a Ferrovia: vale fino a giovedì alle 11, quindi copre l'arrivo, tutta la giornata in laguna di martedì, i Giardini e il ritorno in stazione mercoledì.<br>
+        In alternativa, corsa singola lunedì (€ 9,50) più pass 48 ore da martedì mattina (€ 35): € 44,50, ma lunedì pomeriggio niente vaporetti.</div>
+        <p class="small" style="margin:10px 0 0">Ricordate di <b>convalidare ogni volta</b> che salite, appoggiando la tessera al lettore sul pontile.</p>
         <div class="row" style="margin-top:10px">
           <a class="btn map" href="https://www.veneziaunica.it/acquista-i-biglietti/trasporto-pubblico-a-venezia" target="_blank" rel="noopener">Compra online</a>
           <a class="btn ghost" href="https://actv.avmspa.it/it/content/orari-servizio-di-navigazione-0" target="_blank" rel="noopener">Orari ufficiali ACTV</a>
         </div>
       </div>
 
-      <div class="sec-title" style="margin-top:16px" id="dep-anchor"><h2>Prossime partenze</h2><span>orari ACTV 16–19 nov</span></div>
+      <div class="sec-title" style="margin-top:16px" id="dep-anchor"><h2>Prossime partenze</h2><span>orari ACTV 16–18 nov</span></div>
       <div class="card" id="dep-card">
         <div class="dep-ctl"><select id="dep-stop" aria-label="Fermata"></select><select id="dep-time" aria-label="Dalle ore"></select></div>
         <div class="small muted" id="dep-info"></div>
         <div id="dep-list"></div>
-        <div class="small muted" style="margin-top:6px">Orario feriale ufficiale ACTV, identico da lunedì 16 a giovedì 19. Con nebbia, acqua alta o scioperi può cambiare: controllate anche il cartello sul pontile.</div>
+        <div class="small muted" style="margin-top:6px">Orario feriale ufficiale ACTV, identico da lunedì 16 a mercoledì 18. Con nebbia, acqua alta o scioperi può cambiare: controllate anche il cartello sul pontile.</div>
       </div>
 
       <div class="sec-title" style="margin-top:16px"><h2>I vostri tragitti</h2><span>già pronti</span></div>
@@ -419,8 +418,8 @@ details.faq p{margin:8px 0 0;font-size:14px;color:#334}
       <div class="card">
         <p style="margin:0 0 8px;font-size:14px">A Venezia i musei pubblici sono di due famiglie. I <b>Musei Civici</b> appartengono al Comune e sono gestiti dalla Fondazione MUVE: c'è un biglietto unico, il Museum Pass. I <b>musei statali</b> dipendono dal Ministero della Cultura e hanno biglietti separati.</p>
         <div class="note small"><b>Il biglietto giusto per voi</b><br>
-        ① Se visitate solo il <b>Palazzo Ducale</b> martedì: biglietto Musei di San Marco, <b>€ 35</b> a testa (lo sconto online vale solo comprando 30 giorni prima). Comprende anche Correr, Museo Archeologico e Biblioteca Marciana.<br>
-        ② Se mercoledì entrate anche al <b>Museo del Vetro</b> o al <b>Merletto</b>: prendete il <b>Museum Pass a € 50</b>. Vale 6 mesi, un ingresso in ognuno degli 11 Musei Civici, senza prenotazione. Comprati separatamente, Ducale (€ 35) e Musei delle Isole (€ 20) costerebbero € 55.<br>
+        ① Se visitate solo il <b>Palazzo Ducale</b> lunedì: biglietto Musei di San Marco, <b>€ 35</b> a testa (lo sconto online vale solo comprando 30 giorni prima). Comprende anche Correr, Museo Archeologico e Biblioteca Marciana.<br>
+        ② Se martedì entrate anche al <b>Museo del Vetro</b> o al <b>Merletto</b>: prendete il <b>Museum Pass a € 50</b>. Vale 6 mesi, un ingresso in ognuno degli 11 Musei Civici, senza prenotazione. Comprati separatamente, Ducale (€ 35) e Musei delle Isole (€ 20) costerebbero € 55.<br>
         ③ Gallerie dell'Accademia, Palazzo Grimani e Museo Navale sono a parte.</div>
       </div>
       <div class="chips" id="mus-chips">
@@ -428,8 +427,7 @@ details.faq p{margin:8px 0 0;font-size:14px;color:#334}
         <button class="chip" data-md="0">Aperti lun 16</button>
         <button class="chip" data-md="1">mar 17</button>
         <button class="chip" data-md="2">mer 18</button>
-        <button class="chip" data-md="3">gio 19</button>
-      </div>
+              </div>
       <div id="mus-list"></div>
       <div class="note small">Orari invernali dai siti ufficiali (MUVE, Gallerie dell'Accademia, Ministero della Cultura). Possono cambiare per festività o scioperi: date un'occhiata al sito il giorno prima.</div>
     </section>
@@ -620,7 +618,7 @@ const PLACES = [
   // --- cibo (dati completi in FOOD)
 ];
 
-/* giorni del viaggio: 0=lun 16, 1=mar 17, 2=mer 18, 3=gio 19.  y=aperto n=chiuso q=da verificare */
+/* giorni del viaggio: 0=lun 16, 1=mar 17, 2=mer 18 (il 4° valore non è più usato).  y=aperto n=chiuso q=da verificare */
 const FOOD = [
   {id:'arco', cat:'eco', name:'All\'Arco', zone:'San Polo 436 · Rialto', price:'€', lat:45.43885, lng:12.33404,
    q:'Osteria All\'Arco, San Polo 436, Venezia', tel:'+390415205666',
@@ -682,10 +680,10 @@ const ACTV = JSON.parse(document.getElementById('actv-data').textContent);
 Object.values(ACTV.L).forEach(l=>l.dirs.forEach(dr=>{ const e=dr.sh, o=[]; let x=0,y=0; for(let i=0;i<e.length;i+=2){ x+=e[i]; y+=e[i+1]; o.push([x/1e5,y/1e5]); } dr.sh=o; }));
 const LM = {
   '1':  {c:'#b5502d', cls:'l1', name:'Canal Grande, tutte le fermate', prio:'ess', freq:'ogni 12 minuti · circa 5:00–24:00',
-         why:'La vostra linea: è l\'unica che ferma a <b>S. Maria del Giglio</b>, a 3 minuti dall\'hotel. Lunedì Ferrovia → Giglio e giovedì Giglio → Ferrovia, circa 35 minuti lungo tutto il Canal Grande.',
+         why:'La vostra linea: è l\'unica che ferma a <b>S. Maria del Giglio</b>, a 3 minuti dall\'hotel. Lunedì Ferrovia → Giglio e mercoledì Giglio → Ferrovia, circa 35 minuti lungo tutto il Canal Grande. Mercoledì mattina vi porta anche ai Giardini.',
          dl:['verso S. Marco e Lido','verso Rialto, Ferrovia, P.le Roma']},
   '12': {c:'#7a9a1e', cls:'l12', name:'Laguna nord: Murano, Mazzorbo, Torcello, Burano', prio:'ess', freq:'ogni 30 minuti · da Fondamente Nove alle :10 e alle :40',
-         why:'<b>Mercoledì</b>: Fondamente Nove → Murano Faro in 9 minuti, → Burano in circa 42. Al ritorno Burano → Murano Faro circa 30 minuti.',
+         why:'<b>Martedì</b>: Fondamente Nove → Murano Faro in 9 minuti, → Burano in circa 42. Al ritorno Burano → Murano Faro circa 30 minuti.',
          dl:['verso Murano e Fondamente Nove','verso Burano e Treporti']},
   '2':  {c:'#1e4f7a', cls:'l2', name:'Canal Grande veloce e Giudecca', prio:'ut', freq:'ogni 12 minuti · circa 5:00–24:00',
          why:'Meno fermate della 1: Ferrovia → Rialto in 12 minuti, → Accademia in circa 24. Capolinea a <b>S. Marco Giardinetti</b>, 5 minuti dall\'hotel: alternativa se la 1 è piena.',
@@ -694,13 +692,13 @@ const LM = {
          why:'Collega Murano a <b>Fondamente Nove</b> in 10 minuti, poi gira per Cannaregio, Ferrovia e Giudecca fino a S. Zaccaria (lunga: circa un\'ora).',
          dl:['Murano → F.te Nove → Ferrovia → Giudecca → S. Zaccaria']},
   '4.2':{c:'#7b3f8c', cls:'l42', name:'Giracittà con Murano (senso orario)', prio:'ut', freq:'ogni 20 minuti',
-         why:'<b>Mercoledì sera</b>: da Murano Faro vi porta diretta a <b>S. Zaccaria</b> passando per Fondamente Nove e l\'Arsenale, circa 45 minuti, senza cambi.',
+         why:'<b>Martedì sera</b>: da Murano Faro vi porta diretta a <b>S. Zaccaria</b> passando per Fondamente Nove e l\'Arsenale, circa 45 minuti, senza cambi.',
          dl:['Murano → F.te Nove → Arsenale → S. Zaccaria → Giudecca → Ferrovia']},
   '5.1':{c:'#1f8a78', cls:'l51', name:'Giracittà veloce (Lido → Ferrovia → S. Zaccaria)', prio:'ut', freq:'ogni 20 minuti',
          why:'Ferrovia → S. Zaccaria in circa 24 minuti girando intorno alla città: più veloce della 1. Ferma anche ai <b>Giardini Biennale</b> e a Fondamente Nove.',
          dl:['Lido → F.te Nove → Ferrovia → Zattere → S. Zaccaria → Lido']},
   '5.2':{c:'#1f8a78', cls:'l52', name:'Giracittà veloce (Lido → S. Zaccaria → Ferrovia)', prio:'ut', freq:'ogni 20 minuti',
-         why:'Il <b>piano B di giovedì</b>: S. Zaccaria → Ferrovia in circa 24 minuti, se il Canal Grande è lento o la 1 è troppo piena per le valigie.',
+         why:'Il <b>piano B di mercoledì</b>: S. Zaccaria → Ferrovia in circa 24 minuti, se il Canal Grande è lento o la 1 è troppo piena per le valigie.',
          dl:['Lido → S. Zaccaria → Zattere → Ferrovia → F.te Nove → Lido']},
   '3':  {c:'#d0782a', cls:'l3', name:'Diretta Ferrovia – Murano', prio:'ris', freq:'ogni 15–20 minuti · circa 6:30–19:15',
          why:'Ferrovia → Murano in circa 17 minuti, senza fermate intermedie. Non è nel programma: utile solo se cambiate l\'ordine di mercoledì.',
@@ -716,75 +714,64 @@ const KEYSTOPS = ['s-maria-del-giglio','s-marco-vallaresso','s-marco-giardinetti
 
 const ROUTES = [
   {t:'Stazione → Hotel', when:'lunedì 16, appena arrivati', color:'var(--mattone)', steps:[
-    ['🚆','Scendete dal treno (11:14) e uscite davanti alla stazione Santa Lucia: il pontile <b>Ferrovia</b> è proprio davanti, sui gradini.'],
-    ['🎫','Comprate una <b>corsa singola</b> (€ 9,50 a testa) alle macchinette o alla biglietteria del pontile e convalidatela prima di salire.'],
-    ['⛴','<span class="pill l1">Linea 1</span> direzione Lido / San Marco, fino a <b>S. Maria del Giglio</b>: circa 35 minuti lungo tutto il Canal Grande (una corsa ogni 12 minuti; dopo le 11:14 ce ne sono alle 11:24 e alle 11:36). Sedetevi fuori, a prua o a poppa.'],
+    ['🚆','Scendete dal treno (11:00) e uscite davanti alla stazione Santa Lucia: il pontile <b>Ferrovia</b> è proprio davanti, sui gradini.'],
+    ['🎫','Comprate il <b>pass 72 ore</b> (€ 45 a testa) alle macchinette o alla biglietteria e convalidatelo prima di salire.'],
+    ['⛴','<span class="pill l1">Linea 1</span> dal pontile E, direzione Lido / San Marco, fino a <b>S. Maria del Giglio</b>: circa 35 minuti. Corse alle 11:24 e alle 11:36.'],
     ['🚶','Dal Giglio all\'hotel: 3–5 minuti a piedi.']],
    alt:'Più veloce: <span class="pill l2">Linea 2</span> fino a Rialto o Accademia, poi a piedi. Ma con le valigie conviene la 1, perché vi lascia sotto l\'hotel.', dest:'hotel'},
-  {t:'Hotel → Biennale', when:'martedì 17', color:'var(--acqua)', steps:[
-    ['🚶','<b>Consigliato a piedi</b>: dal Palazzo Ducale lungo la Riva degli Schiavoni e Via Garibaldi, circa 25 minuti con la laguna accanto. Così martedì non vi serve il biglietto.'],
-    ['⛴','In vaporetto: da <b>S. Zaccaria</b> la <span class="pill l1">Linea 1</span> direzione Lido fino a <b>Giardini</b> (circa 6 minuti), oppure 4.1 o 5.1 fino a <b>Giardini Biennale</b>.']],
-   dest:'giardini'},
-  {t:'Hotel → Murano e Burano', when:'mercoledì 18', color:'#4a3784', steps:[
-    ['🚶','A piedi a <b>Fondamente Nove</b> passando per Rialto (circa 20–25 min), oppure da S. Zaccaria con la <span class="pill l42">4.2</span> (lenta, circa 50 minuti).'],
-    ['🎫','Alla prima corsa <b>convalidate il pass 48 ore</b>.'],
-    ['⛴','<span class="pill l12">Linea 12</span> fino a <b>Burano</b> (circa 42 min; partenze alle :10 e alle :40).'],
-    ['⛴','Al ritorno, con la <span class="pill l12">12</span>, scendete a <b>Murano Faro</b> per le fornaci.'],
+  {t:'Hotel → Murano e Burano', when:'martedì 17', color:'#7a9a1e', steps:[
+    ['🚶','Dal Mercato di Rialto a <b>Fondamente Nove</b>: circa 15 minuti a piedi.'],
+    ['⛴','<span class="pill l12">Linea 12</span> dal pontile A fino a <b>Burano</b> (circa 42 min; partenze alle :10 e alle :40).'],
+    ['⛴','Dopo pranzo, <span class="pill l12">12</span> da Burano a <b>Murano Faro</b> (circa 30 min; partenze alle :25 e alle :55).'],
     ['⛴','Da Murano Faro la <span class="pill l42">4.2</span> vi porta diretta a <b>S. Zaccaria</b> (circa 45 min). Oppure <span class="pill l12">12</span> o <span class="pill l41">4.1</span> fino a Fondamente Nove (10 min) e poi 20 minuti a piedi.']],
    dest:'burano'},
-  {t:'Hotel → Stazione', when:'giovedì 19, partenza', color:'var(--oro)', steps:[
-    ['🧳','Ritirate le valigie in reception e camminate fino al <b>Giglio</b> (3–5 min).'],
-    ['⛴','<span class="pill l1">Linea 1</span> direzione Piazzale Roma fino a <b>Ferrovia</b>: circa 36 minuti. Con la corsa delle 12:46 o delle 12:58 arrivate verso le 13:25–13:35, con mezz\'ora di margine sul treno delle 14.'],
-    ['🎫','Il pass 48 ore convalidato mercoledì mattina è ancora valido: non serve un altro biglietto.']],
-   dest:'s-ferrovia'},
+  {t:'Hotel → Biennale → Stazione', when:'mercoledì 18, partenza', color:'var(--oro)', steps:[
+    ['🧳','Lasciate le valigie in reception e andate a <b>S. Marco Vallaresso</b> (5 min).'],
+    ['⛴','<span class="pill l1">Linea 1</span> direzione Lido fino a <b>Giardini</b>: circa 13 minuti.'],
+    ['⛴','Alle 11:29 o alle 11:41, <span class="pill l1">Linea 1</span> dal pontile A dei Giardini, direzione Piazzale Roma, fino al <b>Giglio</b> (17 min). Ritirate le valigie.'],
+    ['⛴','<span class="pill l1">Linea 1</span> dal Giglio alle 12:10 o alle 12:22 fino a <b>Ferrovia</b>: circa 36 minuti. Arrivate verso le 12:50.']],
+   alt:'Piano B se la 1 è troppo piena per le valigie: a piedi fino a S. Zaccaria e <span class="pill l52">5.2</span> fino a Ferrovia, circa 24 minuti.', dest:'s-ferrovia'},
 ];
 
 /* programma: type: sight | food | move */
 const DAYS = [
-  {d:'Lun', n:16, title:'Arrivo sul Canal Grande', sub:'Treno, primo giro in vaporetto, San Marco al tramonto', items:[
-    {t:'11:14', k:'move', h:'Arrivo a Venezia Santa Lucia', p:'Uscite dalla stazione: il Canal Grande è lì davanti. Al pontile Ferrovia comprate una corsa singola a testa (€ 9,50).', pl:'s-ferrovia'},
-    {t:'11:40', k:'move', h:'Linea 1 lungo tutto il Canal Grande', p:'Il modo più bello di arrivare: circa 35 minuti tra palazzi, Rialto e Ca\' d\'Oro. Scendete a S. Maria del Giglio.', pl:'s-giglio', line:'1'},
-    {t:'12:30', k:'move', h:'Lasciate le valigie in hotel', p:'Il check-in è dalle 15:00, ma potete lasciare i bagagli alla reception.', pl:'hotel'},
-    {t:'13:00', k:'food', h:'Pranzo da Trattoria alla Madonna', p:'Lunedì è aperta: frittura mista e spaghetti alle vongole. Sono 12 minuti a piedi, passando per Rialto.', pl:'madonna', alt:'Più veloce ed economico: cicchetti alla Cantina Do Mori (aperta lunedì).'},
-    {t:'14:45', k:'sight', h:'Ponte di Rialto e passeggiata fino a San Marco', p:'Attraversate il ponte e tornate verso San Marco per le Mercerie. Deviazione consigliata: Scala Contarini del Bovolo.', pl:'rialto'},
-    {t:'15:30', k:'sight', h:'Basilica di San Marco', p:'Ultimo accesso alle 16:45: prenotate online una fascia tra le 15:30 e le 16:15. Aggiungete la Pala d\'Oro.', pl:'basilica'},
-    {t:'16:30', k:'sight', h:'Campanile al tramonto', p:'Il sole tramonta verso le 16:40: dall\'alto vedrete la laguna diventare rosa.', pl:'campanile'},
+  {d:'Lun', n:16, title:'Arrivo, Canal Grande e San Marco', sub:'Linea 1 fino all\'hotel, Palazzo Ducale e Basilica nel pomeriggio', items:[
+    {t:'11:00', k:'move', h:'Arrivo a Venezia Santa Lucia', p:'Uscite dalla stazione: il pontile Ferrovia è davanti, sui gradini. Comprate e convalidate il pass ACTV 72 ore (€ 45 a testa): copre tutti i vaporetti fino alla partenza.', pl:'s-ferrovia'},
+    {t:'11:24', k:'move', h:'Linea 1 lungo tutto il Canal Grande', p:'Corse alle 11:24 e alle 11:36, pontile E. Circa 35 minuti tra i palazzi, Rialto e Ca\' d\'Oro: scendete a S. Maria del Giglio.', pl:'s-giglio', line:'1'},
+    {t:'12:05', k:'move', h:'Valigie in hotel', p:'Il check-in è dalle 15, ma alla reception potete lasciare i bagagli.', pl:'hotel'},
+    {t:'12:30', k:'food', h:'Pranzo da Trattoria alla Madonna', p:'Lunedì è aperta: frittura mista e spaghetti alle vongole. Sono 12 minuti a piedi verso Rialto.', pl:'madonna', alt:'Più veloce ed economico: cicchetti alla Cantina Do Mori, lì vicino.'},
+    {t:'14:00', k:'sight', h:'Palazzo Ducale', p:'Sala del Maggior Consiglio, Ponte dei Sospiri e prigioni: calcolate 2 ore. Ultimo ingresso alle 17. Il biglietto comprende anche il Museo Correr.', pl:'ducale'},
+    {t:'16:15', k:'sight', h:'Basilica di San Marco', p:'Ultimo accesso alle 16:45: prenotate online la fascia delle 16:15. Aggiungete la Pala d\'Oro.', pl:'basilica'},
+    {t:'16:45', k:'sight', h:'Tramonto sul Bacino', p:'Il sole tramonta verso le 16:40: uscite in Piazzetta e guardate San Giorgio illuminarsi dalla riva, vicino al Ponte della Paglia.', pl:'sospiri'},
     {t:'18:00', k:'food', h:'Aperitivo da Harry\'s Bar', p:'Il Bellini dove è nato, a 3 minuti dall\'hotel.', pl:'harrys'},
-    {t:'20:00', k:'food', h:'Cena leggera vicino all\'hotel, o check-in con calma', p:'Dopo il viaggio: due passi in Piazza illuminata e un dolce al Gran Caffè Quadri, con l\'orchestrina.', pl:'florian'},
+    {t:'20:00', k:'food', h:'Piazza illuminata e cena leggera', p:'Due passi in Piazza e un dolce al Gran Caffè Quadri, con l\'orchestrina.', pl:'florian'},
   ]},
-  {d:'Mar', n:17, title:'Palazzo Ducale e Biennale', sub:'Il potere della Serenissima, poi l\'arte contemporanea', items:[
-    {t:'09:00', k:'sight', h:'Palazzo Ducale all\'apertura', p:'Sala del Maggior Consiglio, Ponte dei Sospiri e prigioni: calcolate 2 ore. Il biglietto include il Museo Correr.', pl:'ducale'},
-    {t:'11:15', k:'move', h:'A piedi verso la Biennale', p:'25 minuti lungo la Riva degli Schiavoni, con la laguna accanto. Oggi niente biglietto: si va a piedi.', pl:'giardini'},
-    {t:'11:45', k:'sight', h:'Biennale Arte · Giardini', p:'I padiglioni nazionali nel parco. Pranzo veloce al bar interno o in Via Garibaldi.', pl:'giardini'},
-    {t:'14:30', k:'sight', h:'Biennale Arte · Arsenale', p:'La mostra internazionale nelle antiche corderie. Ultimo ingresso 17:45, chiusura 18:00.', pl:'arsenale'},
-    {t:'18:15', k:'move', h:'Rientro in hotel a piedi', p:'Circa 20 minuti dall\'Arsenale lungo la riva, con San Giorgio illuminato davanti. Se piove: una corsa singola di linea 1 fino a Vallaresso.', pl:'hotel'},
-    {t:'20:00', k:'food', h:'Cena da Antiche Carampane', p:'Martedì è aperta: è la trattoria di pesce dei veneziani. Prenotate.', pl:'carampane', alt:'Più vicino alla Biennale: Trattoria da Remigio, a Castello.'},
-  ]},
-  {d:'Mer', n:18, title:'Laguna: Burano e Murano', sub:'Case colorate, vetro, e la sera una cena speciale', items:[
+  {d:'Mar', n:17, title:'Laguna: Burano e Murano', sub:'Mercato di Rialto, case colorate, vetro e cena di pesce', items:[
     {t:'08:45', k:'sight', h:'Mercato di Rialto', p:'Pescheria e banchi di verdura in piena attività. Poi un cicchetto da All\'Arco, se è aperto.', pl:'mercato'},
-    {t:'10:00', k:'move', h:'A Fondamente Nove, poi linea 12', p:'Dal mercato sono circa 15 minuti a piedi. Alla prima corsa convalidate il pass 48 ore, poi linea 12 per Burano (partenze alle :10 e alle :40): circa 42 minuti attraverso la laguna nord.', pl:'s-fnove', line:'12'},
-    {t:'11:00', k:'sight', h:'Burano', p:'Passeggiata tra le case colorate, il campanile storto e le botteghe di merletti.', pl:'burano'},
-    {t:'12:45', k:'food', h:'Pranzo da Al Gatto Nero', p:'Risotto di gò alla buranella. Prenotate, è aperto a pranzo il mercoledì.', pl:'gattonero'},
-    {t:'15:00', k:'sight', h:'Murano', p:'Linea 12 fino a Murano Faro: fornaci, vetrine e il Museo del Vetro.', pl:'murano', line:'12'},
-    {t:'17:00', k:'move', h:'Rientro in hotel', p:'Da Murano Faro la linea 4.2 va diretta a S. Zaccaria in circa 45 minuti. In alternativa 12 o 4.1 fino a Fondamente Nove e poi 20 minuti a piedi.', pl:'s-zaccaria', line:'4.2'},
-    {t:'20:00', k:'food', h:'Cena stellata al Ristorante Quadri', p:'Mercoledì è aperto: menu degustazione con vista sulla Piazza. Prenotate per tempo.', pl:'quadri', alt:'Versione più semplice: giro dei bacari in Fondamenta Ormesini (Al Timon potrebbe essere chiuso il mercoledì).'},
+    {t:'09:45', k:'move', h:'A piedi a Fondamente Nove', p:'Dal mercato sono circa 15 minuti, attraverso Cannaregio.', pl:'s-fnove'},
+    {t:'10:10', k:'move', h:'Linea 12 per Burano', p:'Partenze alle :10 e alle :40 dal pontile A. Circa 42 minuti attraverso la laguna nord, passando per Murano, Mazzorbo e Torcello.', pl:'s-fnove', line:'12'},
+    {t:'11:00', k:'sight', h:'Burano e Museo del Merletto', p:'Le case colorate, il campanile storto e le botteghe di merletti. Il museo è aperto fino alle 16.', pl:'burano'},
+    {t:'12:45', k:'food', h:'Pranzo da Al Gatto Nero', p:'Risotto di gò alla buranella. Martedì è aperto a pranzo: prenotate.', pl:'gattonero'},
+    {t:'14:25', k:'move', h:'Linea 12 per Murano', p:'Partenze da Burano alle :25 e alle :55: circa 30 minuti fino a Murano Faro.', pl:'murano', line:'12'},
+    {t:'15:00', k:'sight', h:'Murano: fornaci e Museo del Vetro', p:'Una dimostrazione in fornace e il Museo del Vetro (aperto fino alle 17).', pl:'murano'},
+    {t:'17:10', k:'move', h:'Rientro con la linea 4.2', p:'Da Murano Faro la 4.2 va diretta a S. Zaccaria in circa 45 minuti, passando per l\'Arsenale. Partenze alle :09, :29 e :49.', pl:'s-zaccaria', line:'4.2'},
+    {t:'20:00', k:'food', h:'Cena da Antiche Carampane', p:'Martedì è aperta: è la trattoria di pesce dei veneziani. Prenotate.', pl:'carampane', alt:'Più informale: giro dei bacari in Fondamenta Ormesini.'},
   ]},
-  {d:'Gio', n:19, title:'Dorsoduro e partenza', sub:'Arte, canali tranquilli e il treno dalle 14', items:[
-    {t:'08:30', k:'move', h:'Colazione e check-out', p:'Lasciate le valigie in reception: le riprendete alle 12:30. Così avete la mattina libera.', pl:'hotel'},
-    {t:'09:00', k:'sight', h:'Piazza San Marco quasi vuota', p:'L\'ultima passeggiata in Piazza prima che arrivino i gruppi.', pl:'piazza'},
-    {t:'09:30', k:'sight', h:'Salute e Punta della Dogana', p:'Si attraversa dal Ponte dell\'Accademia, oppure con il traghetto-gondola del Giglio se è in servizio (€ 2).', pl:'salute'},
-    {t:'10:00', k:'sight', h:'Collezione Peggy Guggenheim', p:'Apre alle 10: il Novecento in una casa sul Canal Grande, con il giardino delle sculture. Calcolate un\'ora e un quarto.', pl:'peggy', alt:'In alternativa: Gallerie dell\'Accademia, la grande pittura veneziana.'},
-    {t:'11:30', k:'food', h:'Pranzo a cicchetti alle Cantine già Schiavi', p:'Davanti allo Squero di San Trovaso: l\'ultimo calice veneziano in piedi al banco.', pl:'schiavi'},
-    {t:'12:30', k:'move', h:'Ritiro valigie in hotel', p:'Sono 12 minuti a piedi dal Ponte dell\'Accademia.', pl:'hotel'},
-    {t:'12:50', k:'move', h:'Linea 1 dal Giglio alla stazione', p:'Corse alle 12:46 e alle 12:58, circa 36 minuti: arrivate verso le 13:30, con margine per il treno dalle 14. Il pass 48 ore è ancora valido. Se il treno parte più tardi, restate a pranzo con calma.', pl:'s-ferrovia', line:'1'},
+  {d:'Mer', n:18, title:'Biennale e partenza', sub:'L\'ultima mattina ai Giardini, poi il treno dopo le 13', items:[
+    {t:'08:30', k:'move', h:'Colazione e check-out', p:'Lasciate le valigie in reception: le riprendete verso mezzogiorno.', pl:'hotel'},
+    {t:'09:15', k:'sight', h:'Piazza San Marco quasi vuota', p:'L\'ultima passeggiata in Piazza prima che arrivino i gruppi.', pl:'piazza'},
+    {t:'09:41', k:'move', h:'Linea 1 fino ai Giardini', p:'Da S. Marco Vallaresso, pontile B, direzione Lido: corse alle 9:41 e alle 9:53, circa 13 minuti.', pl:'giardini', line:'1'},
+    {t:'10:00', k:'sight', h:'Biennale Arte · Giardini', p:'Apre alle 10: circa un\'ora e venti tra i padiglioni nazionali nel parco. Chiude per sempre domenica 22.', pl:'giardini', alt:'Se preferite l\'arte antica: Gallerie dell\'Accademia, aperte dalle 9.'},
+    {t:'11:29', k:'move', h:'Linea 1 dai Giardini al Giglio', p:'Pontile A, direzione Piazzale Roma: corse alle 11:29 e alle 11:41, circa 17 minuti. Scendete a S. Maria del Giglio.', pl:'s-giglio', line:'1'},
+    {t:'11:50', k:'move', h:'Ritiro valigie in hotel', p:'Sono 3 minuti a piedi dal Giglio.', pl:'hotel'},
+    {t:'12:10', k:'move', h:'Linea 1 dal Giglio alla stazione', p:'Corse alle 12:10 e alle 12:22, circa 36 minuti: arrivate a Ferrovia verso le 12:50, in tempo per il treno dopo le 13. Il pass 72 ore è ancora valido.', pl:'s-ferrovia', line:'1'},
   ]},
 ];
 
 const WEATHER = [
-  {d:'Lun 16', ico:'⛅', min:4, max:11, sky:'Nuvoloso, piogge poco probabili', tip:'Giornata asciutta per il Canal Grande e il Campanile.'},
-  {d:'Mar 17', ico:'🌧️', min:8, max:11, sky:'Coperto, possibile pioggia', tip:'Portate l\'ombrello: le fonti vanno da “coperto” a “pioggia moderata”. L\'Arsenale è al coperto.'},
-  {d:'Mer 18', ico:'🌦️', min:9, max:12, sky:'Nubi e schiarite', tip:'Qualche pioggia possibile: in laguna fa più freddo, vestitevi a strati.'},
-  {d:'Gio 19', ico:'🌥️', min:10, max:13, sky:'Velato, pioggia leggera possibile', tip:'Il giorno più mite.'},
+  {d:"Lun 16", ico:"🌧️", min:8, max:11, sky:"Pioggia, vento di scirocco", tip:"Ombrello e scarpe impermeabili. Con lo scirocco forte la marea può salire: controllate il Centro Maree."},
+  {d:"Mar 17", ico:"🌦️", min:7, max:11, sky:"Nebbia al mattino, pioggia in serata", tip:"Giornata in laguna: al mattino nebbia sull'acqua, portate un k-way e l'ombrello per la sera."},
+  {d:"Mer 18", ico:"🌦️", min:9, max:14, sky:"Nuvoloso, pioggia debole a tratti", tip:"Fonti in disaccordo: k-way per i Giardini e un ombrello pieghevole nel bagaglio a mano."}
 ];
 const SERVICES = [
   {id:'wc-sanmarco', ico:'🚻', name:'Bagni pubblici San Marco', lat:45.43348, lng:12.33675, q:'Bagni pubblici San Marco 1265, Calle dell\'Ascensione, Venezia', desc:'Calle dell\'Ascensione, dietro Piazza San Marco: il più vicino all\'hotel. Ore 9:30–19:30, € 1,50.'},
@@ -804,19 +791,16 @@ const SERVICES = [
   {id:'tr-giglio', ico:'🛶', name:'Traghetto Santa Maria del Giglio', lat:45.43155, lng:12.33290, q:'Traghetto Santa Maria del Giglio, Venezia', desc:'Davanti all\'hotel: attraversa verso la Salute, € 2. Indicativamente 9–18, ma non è sempre in servizio.'},
 ];
 const BOOKINGS = [
-  {id:'madonna', label:'Trattoria alla Madonna', when:'Lun 16 · pranzo 13:00', tel:'+390415223824'},
-  {id:'basilica', label:'Basilica di San Marco', when:'Lun 16 · fascia 15:30–16:15', url:'https://www.basilicasanmarco.it'},
-  {id:'campanile', label:'Campanile di San Marco', when:'Lun 16 · verso le 16:30', url:'https://www.basilicasanmarco.it'},
-  {id:'ducale', label:'Palazzo Ducale', when:'Mar 17 · ore 9:00', url:'https://palazzoducale.visitmuve.it'},
-  {id:'giardini', label:'Biennale Arte (Giardini + Arsenale)', when:'Mar 17 · dalle 11:45', url:'https://www.labiennale.org/it/arte/2026/informazioni'},
+  {id:'madonna', label:'Trattoria alla Madonna', when:'Lun 16 · pranzo 12:30', tel:'+390415223824'},
+  {id:'ducale', label:'Palazzo Ducale', when:'Lun 16 · ore 14:00', url:'https://palazzoducale.visitmuve.it'},
+  {id:'basilica', label:'Basilica di San Marco', when:'Lun 16 · fascia 16:15', url:'https://www.basilicasanmarco.it'},
+  {id:'gattonero', label:'Al Gatto Nero, Burano', when:'Mar 17 · pranzo 12:45', tel:'+39041730120'},
   {id:'carampane', label:'Antiche Carampane', when:'Mar 17 · cena 20:00', tel:'+390415240165'},
-  {id:'gattonero', label:'Al Gatto Nero, Burano', when:'Mer 18 · pranzo 12:45', tel:'+39041730120'},
-  {id:'quadri', label:'Ristorante Quadri', when:'Mer 18 · cena 20:00', tel:'+390415222105'},
-  {id:'peggy', label:'Collezione Peggy Guggenheim', when:'Gio 19 · ore 10:00', url:'https://www.guggenheim-venice.it'},
+  {id:'giardini', label:'Biennale Arte (Giardini)', when:'Mer 18 · ore 10:00', url:'https://www.labiennale.org/it/arte/2026/informazioni'},
 ];
 const LINE1_PATH = [[12.31879,45.43942],[12.31889,45.43931],[12.31954,45.43934],[12.32016,45.43941],[12.32067,45.43953],[12.32099,45.43971],[12.322,45.44068],[12.3225,45.44102],[12.32448,45.44178],[12.32642,45.44234],[12.32793,45.44239],[12.32894,45.44231],[12.3302,45.44209],[12.33103,45.44182],[12.33201,45.44135],[12.33372,45.44042],[12.33511,45.43978],[12.33546,45.43956],[12.33565,45.43937],[12.33571,45.43918],[12.3357,45.43833],[12.33563,45.43796],[12.33551,45.43774],[12.33515,45.43746],[12.33404,45.43692],[12.33243,45.43639],[12.32992,45.43573],[12.32795,45.43503],[12.32774,45.43483],[12.32752,45.43446],[12.32738,45.43401],[12.32735,45.43364],[12.32738,45.43344],[12.3276,45.43283],[12.32793,45.43238],[12.3282,45.43214],[12.32867,45.43181],[12.32904,45.43165],[12.32962,45.43147],[12.33066,45.43129],[12.3321,45.43123],[12.3375,45.43161],[12.3385,45.4318],[12.341,45.4323],[12.3432,45.4328],[12.347,45.4327],[12.3505,45.4324],[12.354,45.4302],[12.3563,45.4289]];
 
-const CHECK = ['Scaricare l\'app hi!tide Venice (acqua alta)','Scarpe impermeabili e ombrello','Pass ACTV 48 ore (si può comprare online e convalidare mercoledì)','Monete o carta per bagni pubblici e traghetti (€ 1,50 e € 2)','Biglietto del treno di ritorno (giovedì dalle 14)','Installare l\'app sulla schermata Home'];
+const CHECK = ['Scaricare l\'app hi!tide Venice (acqua alta)','Scarpe impermeabili e ombrello','Pass ACTV 72 ore (si compra a Ferrovia appena arrivati, o online)','Monete o carta per bagni pubblici e traghetti (€ 1,50 e € 2)','Biglietto del treno di ritorno (giovedì dalle 14)','Installare l\'app sulla schermata Home'];
 
 /* ============ UTILS ============ */
 const $ = s => document.querySelector(s);
@@ -825,7 +809,7 @@ const MUSEI = [
    hours:'Tutti i giorni 9–18, ultimo ingresso 17.', ticket:'Biglietto Musei di Piazza San Marco: € 35 (ridotto € 15). Comprende anche Correr, Museo Archeologico e Biblioteca Marciana.',
    intro:'Per quasi mille anni è stato il cuore della Repubblica: casa del Doge, sede dei consigli e dei tribunali, e prigione. È il monumento da non perdere.',
    inside:['La Scala dei Giganti e la Scala d\'Oro, con la volta a stucchi dorati','La Sala del Maggior Consiglio, con il <i>Paradiso</i> di Tintoretto e i ritratti dei Dogi (con il drappo nero sul traditore Marin Faliero)','Le sale del Collegio e del Senato, con soffitti di Veronese e Tintoretto','L\'Armeria, poi il Ponte dei Sospiri e le Prigioni Nuove'],
-   tip:'Nel vostro programma: martedì alle 9. Due quadri (il <i>Ratto d\'Europa</i> di Veronese e un Bassano) sono in restauro e al loro posto ci sono copie.', url:'https://palazzoducale.visitmuve.it'},
+   tip:'Nel vostro programma: lunedì alle 14. Due quadri (il <i>Ratto d\'Europa</i> di Veronese e un Bassano) sono in restauro e al loro posto ci sono copie.', url:'https://palazzoducale.visitmuve.it'},
   {id:'m-correr', kind:'civ', name:'Museo Correr, Museo Archeologico e Biblioteca Marciana', area:'Piazza San Marco, lato opposto alla Basilica', lat:45.43390, lng:12.33725, ico:'🏛',
    open:['y','y','y','y'], hours:'Tutti i giorni 10–17, ultimo ingresso 16.', ticket:'Incluso nel biglietto del Palazzo Ducale (un ingresso per museo).',
    intro:'Nelle sale del palazzo reale fatto costruire da Napoleone in Piazza: la storia e l\'arte di Venezia raccontate dalle sue collezioni civiche.',
@@ -835,7 +819,7 @@ const MUSEI = [
    open:['y','n','y','y'], hours:'10–17, chiuso il martedì.', ticket:'Nel biglietto "Musei del Settecento" (€ 20 con Mocenigo e Casa Goldoni) o nel Museum Pass.',
    intro:'Un palazzo barocco sul Canal Grande arredato come la casa di una famiglia nobile del Settecento: il secolo di Tiepolo, Canaletto, Goldoni e Casanova.',
    inside:['Il salone da ballo con le pareti dipinte in prospettiva','Soffitti affrescati da Giambattista Tiepolo','Gli affreschi di Giandomenico Tiepolo staccati dalla villa di famiglia, con i Pulcinella e il <i>Mondo Novo</i>','Scene di vita veneziana di Pietro Longhi, vedute di Canaletto, mobili di Brustolon e una farmacia del Settecento ricostruita'],
-   tip:'Giovedì mattina siete in Dorsoduro: è a 5 minuti dalle Cantine già Schiavi. Martedì è chiuso.', url:'https://carezzonico.visitmuve.it'},
+   tip:'Non è nel programma: se tornate a Venezia, è uno dei musei più piacevoli. Martedì è chiuso.', url:'https://carezzonico.visitmuve.it'},
   {id:'m-pesaro', kind:'civ', name:'Ca\' Pesaro · Arte Moderna e Museo d\'Arte Orientale', area:'Santa Croce · fermata S. Stae (linea 1)', lat:45.44110, lng:12.33215, ico:'🖼',
    open:['n','y','y','y'], hours:'10–17, chiuso il lunedì.', ticket:'Nel biglietto "Arte moderna e contemporanea" (€ 20 con Fortuny e MUVEC) o nel Museum Pass. Comprende il Museo d\'Arte Orientale.',
    intro:'Il grande palazzo di Longhena ospita l\'arte dell\'Ottocento e del Novecento, molta acquistata alle prime Biennali. All\'ultimo piano c\'è un museo statale di arte giapponese.',
@@ -865,12 +849,12 @@ const MUSEI = [
    open:['y','y','y','y'], hours:'Tutti i giorni 10–17, ultimo ingresso 16.', ticket:'Nel biglietto "Musei delle Isole" (€ 20 con Merletto e Torcello) o nel Museum Pass.',
    intro:'Nel palazzo dei vescovi di Torcello sul canale di Murano: la storia del vetro dall\'antichità romana a oggi.',
    inside:['Vetri romani e la <i>Coppa Barovier</i>, una coppa nuziale smaltata del Quattrocento','Murrine, specchi, lampadari e vetri soffiati del Rinascimento e del Settecento','I vetri del Novecento: Venini, Carlo Scarpa e i grandi designer','La produzione contemporanea delle fornaci dell\'isola'],
-   tip:'Mercoledì pomeriggio siete a Murano: ci vuole circa un\'ora.', url:'https://museovetro.visitmuve.it'},
+   tip:'Martedì pomeriggio siete a Murano: ci vuole circa un\'ora.', url:'https://museovetro.visitmuve.it'},
   {id:'m-merletto', kind:'civ', name:'Museo del Merletto', area:'Burano · Piazza Galuppi', lat:45.48545, lng:12.41755, ico:'🪡',
    open:['n','y','y','y'], hours:'10–16, ultimo ingresso 15:30, chiuso il lunedì.', ticket:'Nel biglietto "Musei delle Isole" (€ 20) o nel Museum Pass.',
    intro:'Nella sede della storica Scuola di Merletti di Burano, attiva dal 1872 al 1970.',
    inside:['Oltre cento merletti dal Cinquecento al Novecento','Il "punto Burano" e le tecniche ad ago','Spesso ci sono merlettaie al lavoro: le potete guardare da vicino'],
-   tip:'Mercoledì mattina, prima del pranzo al Gatto Nero. Chiude alle 16.', url:'https://museomerletto.visitmuve.it'},
+   tip:'Martedì mattina, prima del pranzo al Gatto Nero. Chiude alle 16.', url:'https://museomerletto.visitmuve.it'},
   {id:'m-torcello', kind:'civ', name:'Museo di Torcello', area:'Torcello · alcune corse della linea 12, oppure linea 9 da Burano', lat:45.49750, lng:12.41850, ico:'🏺',
    open:['n','y','y','y'], hours:'11–17, chiuso il lunedì.', ticket:'Nel biglietto "Musei delle Isole" (€ 20) o nel Museum Pass.',
    intro:'Racconta le origini di Venezia, nell\'isola dove la laguna fu abitata prima della città.',
@@ -885,17 +869,17 @@ const MUSEI = [
    hours:'Riaprono il 12 novembre. Mar–dom 9–19, biglietteria fino alle 18. Chiuse il lunedì.', ticket:'€ 15 (cittadini UE 18–25 anni € 2, gratis sotto i 18).',
    intro:'Il più importante museo di pittura veneziana: cinque secoli di arte, dal Trecento al Settecento.',
    inside:['La <i>Tempesta</i> di Giorgione','Le Madonne e la Pala di San Giobbe di Giovanni Bellini','Il ciclo di Sant\'Orsola di Carpaccio','La <i>Presentazione della Vergine</i> di Tiziano, ancora nella sala per cui fu dipinta, e la sua ultima <i>Pietà</i>','Il <i>Miracolo dello schiavo</i> di Tintoretto e la gigantesca <i>Cena in casa di Levi</i> di Veronese'],
-   tip:'Giovedì mattina, alternativa al Peggy Guggenheim: apre alle 9. Lunedì è chiusa.', url:'https://www.gallerieaccademia.it'},
+   tip:'Mercoledì mattina, alternativa alla Biennale: apre alle 9. Lunedì è chiusa.', url:'https://www.gallerieaccademia.it'},
   {id:'m-grimani', kind:'stat', name:'Museo di Palazzo Grimani', area:'Castello · Santa Maria Formosa, vicino alla Libreria Acqua Alta', lat:45.43790, lng:12.34125, ico:'🏛',
    open:['n','y','y','y'], hours:'Mar–dom 10–19, ultimo ingresso 18. Chiuso il lunedì.', ticket:'Biglietto in biglietteria, comprende la mostra in corso.',
    intro:'Un raro palazzo rinascimentale "alla romana", costruito dal patriarca Giovanni Grimani per la sua collezione di antichità.',
    inside:['La Tribuna, la stanza delle statue antiche, con il <i>Ratto di Ganimede</i> appeso al lucernario','La Sala a fogliami, con piante e uccelli dipinti sul soffitto','Stanze affrescate da artisti della scuola di Raffaello','Fino al 22 novembre la mostra del pittore ghanese Amoako Boafo'],
-   tip:'Martedì è vicino al vostro percorso tra San Marco e la Biennale.', url:'https://museogrimani.cultura.gov.it'},
+   tip:'A 5 minuti da San Marco, vicino alla Libreria Acqua Alta.', url:'https://museogrimani.cultura.gov.it'},
   {id:'m-munav', kind:'stat', name:'Museo Storico Navale (MUNAV)', area:'Castello · Riva S. Biasio, fermata Arsenale', lat:45.43365, lng:12.35090, ico:'⚓',
    open:['q','n','q','q'], hours:'In inverno 10–17, chiuso il martedì (verificate sul sito).', ticket:'Biglietto a parte. Il sommergibile si visita a orari fissi.',
    intro:'Il museo della Marina Militare racconta Venezia potenza navale, dalle galee della Serenissima alle navi moderne.',
    inside:['Il modello del Bucintoro, la nave di parata del Doge','Galee, armi, strumenti di navigazione e la gondola di Peggy Guggenheim','Il Padiglione delle Navi all\'Arsenale','Il sommergibile <i>Enrico Dandolo</i>, a orari fissi'],
-   tip:'Martedì siete all\'Arsenale per la Biennale, ma proprio il martedì è chiuso.', url:'https://www.munav.it'},
+   tip:'Vicino alla fermata Arsenale della linea 1. Martedì è chiuso.', url:'https://www.munav.it'},
   {id:'m-cadoro', kind:'stat', name:'Galleria Franchetti alla Ca\' d\'Oro', area:'Cannaregio · fermata Ca\' d\'Oro (linea 1)', lat:45.44060, lng:12.33425, ico:'✨',
    open:['n','n','n','n'], closed:true, hours:'Chiusa per lavori: dovrebbe riaprire nel 2027.', ticket:'',
    intro:'Il palazzo gotico più famoso del Canal Grande, con la facciata traforata che un tempo era dorata.',
@@ -914,17 +898,17 @@ const ICON_PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 function actions(p){ return `<div class="row"><a class="btn go" href="${gmaps(p)}" target="_blank" rel="noopener">${ICON_GO}Portami qui</a><button class="btn map" data-focus="${p.id}">${ICON_PIN}Sulla mappa</button></div>`; }
 
 /* ============ DATE / COUNTDOWN ============ */
-const TRIP_START = new Date('2026-11-16T11:14:00+01:00');
+const TRIP_START = new Date('2026-11-16T11:00:00+01:00');
 function todayIndex(){
   const now = new Date();
   const fmt = new Intl.DateTimeFormat('it-IT',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
   const [dd,mm,yy] = fmt.split('/').map(Number);
-  if (yy===2026 && mm===11 && dd>=16 && dd<=19) return dd-16;
+  if (yy===2026 && mm===11 && dd>=16 && dd<=18) return dd-16;
   return -1;
 }
 function renderCountdown(){
   const el = $('#countdown'); const ti = todayIndex(); const now = new Date();
-  if (ti >= 0){ el.textContent = 'Giorno ' + (ti+1) + ' di 4'; return; }
+  if (ti >= 0){ el.textContent = 'Giorno ' + (ti+1) + ' di 3'; return; }
   const ms = TRIP_START - now;
   if (ms > 0){
     const days = Math.floor(ms/864e5), hrs = Math.floor((ms%864e5)/36e5);
@@ -947,7 +931,7 @@ function renderDays(){
     d.items.map(it=>{
       const p = byId(it.pl);
       const pill = it.line ? ` <span class="pill ${(LM[it.line]||{}).cls||''}">Linea ${it.line}</span>` : '';
-      const bk = BOOKINGS.find(b=>b.id===it.pl); let badge='';
+      const bk = it.k!=='move' && BOOKINGS.find(b=>b.id===it.pl); let badge='';
       if (bk){ const st=bookState(bk.id); badge = st.done ? `<span class="book-badge ok">✓ Prenotato${st.time?' '+esc(st.time):''}${st.code?' · '+esc(st.code):''}</span>` : `<span class="book-badge todo">Da prenotare</span>`; }
       return `<div class="ev ${it.k}"><div class="card"><div class="ev-time">${it.t}${pill}${badge}</div><h4>${esc(it.h)}</h4><p>${esc(it.p)}</p>${it.alt?`<div class="alt">↳ ${esc(it.alt)}</div>`:''}${p?actions(p):''}</div></div>`;
     }).join('') + '</div>';
@@ -965,13 +949,13 @@ function renderVap(){
 let foodFilter = 'all';
 const CAT = {eco:['eco','Economico'], tip:['tip','Tipico'], pre:['pre','Pregiato']};
 function renderFood(){
-  const L = ['Lun 16','Mar 17','Mer 18','Gio 19'];
+  const L = ['Lun 16','Mar 17','Mer 18'];
   $('#food-list').innerHTML = FOOD.filter(f=>foodFilter==='all'||f.cat===foodFilter).map(f=>{
     const p = {...f, type:'food'};
     return `<div class="card food-card"><div class="food-top"><div><span class="tag ${CAT[f.cat][0]}">${CAT[f.cat][1]}</span><h3 style="margin-top:6px">${esc(f.name)}</h3></div><div class="price">${f.price}</div></div>
       <div class="where">${esc(f.zone)}${f.tel?` · <a href="tel:${f.tel}">${f.tel.replace('+39','+39 ')}</a>`:''}</div>
       <p>${esc(f.desc)}</p><p class="small"><b>Da ordinare:</b> ${esc(f.order)}</p><p class="small muted" style="margin-bottom:4px">🕑 ${esc(f.hours)}</p>
-      <div class="wk">${f.open.map((o,i)=>`<span class="${o}">${L[i]} ${o==='y'?'✓':o==='n'?'✕':'?'}</span>`).join('')}</div>${actions(p)}</div>`;
+      <div class="wk">${f.open.slice(0,3).map((o,i)=>`<span class="${o}">${L[i]} ${o==='y'?'✓':o==='n'?'✕':'?'}</span>`).join('')}</div>${actions(p)}</div>`;
   }).join('');
 }
 $('#food-chips').addEventListener('click', e=>{ const b=e.target.closest('[data-f]'); if(!b) return; foodFilter=b.dataset.f; document.querySelectorAll('#food-chips .chip').forEach(c=>c.classList.toggle('on',c===b)); renderFood(); });
@@ -979,7 +963,7 @@ $('#food-chips').addEventListener('click', e=>{ const b=e.target.closest('[data-
 /* ============ MUSEI ============ */
 let musDay=-1;
 function renderMusei(){
-  const L=['Lun 16','Mar 17','Mer 18','Gio 19'];
+  const L=['Lun 16','Mar 17','Mer 18'];
   const list=MUSEI.filter(m=>musDay<0 || m.open[musDay]!=='n');
   $('#mus-list').innerHTML = list.map(m=>{ const p = m.pl ? byId(m.pl) : byId(m.id);
     const tag = m.closed ? '<span class="tag chiuso">Chiuso per lavori</span>' : `<span class="tag ${m.kind}">${m.kind==='civ'?'Museo civico':'Museo statale'}</span>`;
@@ -987,7 +971,7 @@ function renderMusei(){
       <p style="margin:0 0 6px;font-size:14px">${m.intro}</p>
       <div class="small" style="font-weight:800;margin-top:4px">Cosa c'è dentro</div><ul>${m.inside.map(x=>`<li>${x}</li>`).join('')}</ul>
       <div class="kv2"><b>Orari:</b> ${esc(m.hours)}</div>${m.ticket?`<div class="kv2"><b>Biglietto:</b> ${esc(m.ticket)}</div>`:''}
-      <div class="wk">${m.open.map((o,i)=>`<span class="${o}">${L[i]} ${o==='y'?'✓':o==='n'?'✕':'?'}</span>`).join('')}</div>
+      <div class="wk">${m.open.slice(0,3).map((o,i)=>`<span class="${o}">${L[i]} ${o==='y'?'✓':o==='n'?'✕':'?'}</span>`).join('')}</div>
       ${m.tip?`<div class="note small" style="margin-bottom:10px">💡 ${m.tip}</div>`:''}
       <div class="row">${p?`<a class="btn go" href="${gmaps(p)}" target="_blank" rel="noopener">${ICON_GO}Portami qui</a><button class="btn map" data-focus="${p.id}">${ICON_PIN}Sulla mappa</button>`:''}<a class="btn ghost" href="${m.url}" target="_blank" rel="noopener">Sito ufficiale</a></div></div>`; }).join('') || '<div class="card small">Nessun museo aperto quel giorno.</div>';
 }
@@ -1026,10 +1010,11 @@ function renderServices(){
 function loadWeather(){
   if (!/^https?:$/.test(location.protocol)) return;
   fetch('weather.json?t='+Date.now(), {cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{
-    if (!j || !Array.isArray(j.days) || j.days.length!==4) return;
-    j.days.forEach((d,i)=>Object.assign(WEATHER[i], d));
+    if (!j || !Array.isArray(j.days) || j.days.length<3) return;
+    j.days.slice(0,3).forEach((d,i)=>Object.assign(WEATHER[i], d));
     if (j.updated) $('#meteo-upd').textContent = 'aggiornate ' + j.updated;
     if (j.note) $('#meteo-note').textContent = j.note;
+    try{ const ds=WEATHER.slice(0,3); $('#hero-t').textContent = Math.min(...ds.map(d=>d.min))+'–'+Math.max(...ds.map(d=>d.max))+' °C'; }catch(e){}
     renderWeather(); renderDays();
   }).catch(()=>{});
 }
@@ -1038,7 +1023,7 @@ function loadWeather(){
 /* ============ ORARI ACTV ============ */
 const fmtT = m => { m=((m%1440)+1440)%1440; return Math.floor(m/60)+':'+String(m%60).padStart(2,'0'); };
 function romeNow(){ const d=new Date(); try{ const f=new Intl.DateTimeFormat('it-IT',{timeZone:'Europe/Rome',hour12:false,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).formatToParts(d); const g=k=>+f.find(x=>x.type===k).value; return {min:(g('hour')%24)*60+g('minute'), ymd:g('year')*10000+g('month')*100+g('day')}; }catch(e){ return {min:d.getHours()*60+d.getMinutes(), ymd:d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate()}; } }
-const inTrip = () => { const n=romeNow().ymd; return n>=20261116 && n<=20261119; };
+const inTrip = () => { const n=romeNow().ymd; return n>=20261116 && n<=20261118; };
 function servingAt(g, sid){ const out=[]; LORDER.forEach(sn=>ACTV.L[sn].dirs.forEach((dr,di)=>{ const i=dr.g.indexOf(g); if(i<0 || !dr.t[i].length) return;
     let times=dr.t[i]; if(sid){ const pi=dr.p[i].indexOf(sid); if(pi<0) return; times=times.filter(v=>((v>>3)&7)===pi); if(!times.length) return; }
     out.push({sn,di,dr,i,times}); })); return out; }
@@ -1084,7 +1069,7 @@ function initDeps(){
 }
 function renderDeps(){
   const g=$('#dep-stop').value, tv=$('#dep-time').value, isNow=tv==='now', from=isNow?romeNow().min:+tv;
-  $('#dep-info').textContent = isNow ? `Ora a Venezia: ${fmtT(from)}${inTrip()?'':' · orario dei giorni 16–19 novembre'}` : '';
+  $('#dep-info').textContent = isNow ? `Ora a Venezia: ${fmtT(from)}${inTrip()?'':' · orario dei giorni 16–18 novembre'}` : '';
   $('#dep-list').innerHTML = depRows(g, from, isNow && inTrip(), 4, true);
 }
 document.addEventListener('click', e=>{
@@ -1119,7 +1104,7 @@ function stopSheet(gs, p){
   const tgt = p || {name:title, lat:g0[1], lng:g0[2], q:title+' fermata vaporetto, Venezia'};
   const pons = Object.entries(ACTV.P).filter(([sid,v])=>gs.includes(v[0]) && pontSummary(sid).length).sort((a,b)=>(a[1][1]||'').localeCompare(b[1][1]||''));
   const pl = pons.length>1 ? `<div class="small" style="margin:8px 0 2px;font-weight:800">I pontili: scegliete quello della vostra direzione</div><div class="plist">${pons.map(([sid,v])=>`<button class="pbtn" data-pont="${sid}"><b>${v[1]||'•'}</b><span>${esc(pontSummary(sid).join(' · '))}</span></button>`).join('')}</div>` : '';
-  $('#sheet-body').innerHTML = `<h3>⛴ ${esc(title)}</h3><div class="small muted">Prossime partenze · ora ${fmtT(now)}${inTrip()?'':' (orario 16–19 nov)'}</div>${pl}
+  $('#sheet-body').innerHTML = `<h3>⛴ ${esc(title)}</h3><div class="small muted">Prossime partenze · ora ${fmtT(now)}${inTrip()?'':' (orario 16–18 nov)'}</div>${pl}
     <div class="dep-list sm">${gs.map(g=>(gs.length>1?`<div class="small" style="font-weight:800;margin-top:6px">${esc(ACTV.G[g][0])}</div>`:'')+depRows(g, now, inTrip(), 3, false)).join('')}</div>
     <div class="row"><button class="btn ghost" data-stopfull="${gs[0]}">Tutti gli orari</button><a class="btn go" href="${gmaps(tgt)}" target="_blank" rel="noopener">${ICON_GO}Portami qui</a></div>`;
   $('#sheet').classList.add('open');
@@ -1127,7 +1112,7 @@ function stopSheet(gs, p){
 function pontSheet(sid){
   const [g,L,lat,lng]=ACTV.P[sid], now=romeNow().min, name=ACTV.G[g][0];
   const others=Object.entries(ACTV.P).filter(([x,v])=>v[0]===g && x!==sid && pontSummary(x).length);
-  $('#sheet-body').innerHTML = `<h3>⛴ ${esc(name)} · pontile ${esc(L||'unico')}</h3><div class="small muted">Da questo pontile, ora ${fmtT(now)}${inTrip()?'':' (orario 16–19 nov)'}</div>
+  $('#sheet-body').innerHTML = `<h3>⛴ ${esc(name)} · pontile ${esc(L||'unico')}</h3><div class="small muted">Da questo pontile, ora ${fmtT(now)}${inTrip()?'':' (orario 16–18 nov)'}</div>
     <div class="dep-list sm">${depRows(g, now, inTrip(), 3, false, sid)}</div>
     ${others.length?`<div class="small" style="font-weight:800;margin:4px 0">Altri pontili di ${esc(name)}</div><div class="plist">${others.map(([x,v])=>`<button class="pbtn" data-pont="${x}"><b>${v[1]||'•'}</b><span>${esc(pontSummary(x).join(' · '))}</span></button>`).join('')}</div>`:''}
     <div class="row"><button class="btn ghost" data-stopfull="${g}">Tutti gli orari</button><a class="btn go" href="${gmaps({lat,lng,q:lat+','+lng})}" target="_blank" rel="noopener">${ICON_GO}Portami qui</a></div>`;
@@ -1226,16 +1211,65 @@ function makeVZLayer(){
     pts.forEach(([x,y])=>{ B.ensure(N+1); const c0=B.vert(x,y,0,0,COL); for(let k=0;k<N;k++){ const a=k/N*Math.PI*2; B.vert(x,y,Math.cos(a),Math.sin(a),COL); } for(let k=0;k<N;k++) B.i.push(c0,c0+1+k,c0+1+(k+1)%N); }); }
   const lineB={}; LORDER.forEach(sn=>{ const B=new LBuilder(), COL=hexRGB(LM[sn].c); ACTV.L[sn].dirs.forEach(dr=>lineGeom(B, dr.sh, COL)); lineB[sn]=B; });
   const DAYCOL=hexRGB('#0f3b3f');
-  // Edifici: pareti + tetti
-  const LX=-0.55, LY=0.45; // luce da sud-ovest (y locale cresce verso sud)
-  raw.b.forEach(([h,b,poi,rings])=>{
-    const R=rings.map(decRing); const base=poi?GOLD:rampColor(h);
-    const roof=base.map(c=>Math.min(1,c*1.06));
-    R.forEach(r=>{ const n=r.length; bld.ensure(n*4);
+  // Edifici: intonaci veneziani, finestre (nello shader), tetti a falde in coppi
+  const LX=-0.55, LY=0.45, LZ=0.75; // luce da sud-ovest, un po' dall'alto
+  function BB(){ this.chunks=[]; this.nc(); }
+  BB.prototype.nc=function(){ this.v=[]; this.i=[]; this.n=0; this.chunks.push({v:this.v,i:this.i}); };
+  BB.prototype.ensure=function(k){ if(this.n+k>65000) this.nc(); };
+  BB.prototype.vert=function(x,y,z,c,u,w,top){ this.v.push(x,y,z,c[0],c[1],c[2],u,w,top); return this.n++; };
+  const B3=new BB();
+  const hx=h=>hexRGB(h);
+  const WALLS=['#dfa983','#e6c095','#c97b5f','#ecd9b8','#d9b281','#bf6a50','#efe1cc','#d6957a','#e2b48f','#cf8a63','#e8cfa8','#c4876a'].map(hx);
+  const ROOFS=['#a95a3b','#b4643f','#9d5236','#b86d48','#a4553a','#8f4f37'].map(hx);
+  const STONE=hx('#ece6d8'), LEAD=hx('#8e9396');
+  const hash=k=>{ let x=Math.imul(k^0x9e3779b9,0x85ebca6b); x^=x>>>13; x=Math.imul(x,0xc2b2ae35); x^=x>>>16; return (x>>>0)/4294967296; };
+  const area=r=>{ let a=0; for(let k=0,n=r.length;k<n;k++){ const [x0,y0]=r[k],[x1,y1]=r[(k+1)%n]; a+=x0*y1-x1*y0; } return a/2; };
+  const perim=r=>{ let L=0; for(let k=0,n=r.length;k<n;k++){ const [x0,y0]=r[k],[x1,y1]=r[(k+1)%n]; L+=Math.hypot(x1-x0,y1-y0); } return L; };
+  function insetRing(r,d){ const n=r.length, A=area(r), sg=A>0?1:-1, out=[];
+    for(let k=0;k<n;k++){ const [px,py]=r[(k-1+n)%n],[cx,cy]=r[k],[qx,qy]=r[(k+1)%n];
+      let e1x=cx-px,e1y=cy-py,l1=Math.hypot(e1x,e1y)||1; e1x/=l1; e1y/=l1; let e2x=qx-cx,e2y=qy-cy,l2=Math.hypot(e2x,e2y)||1; e2x/=l2; e2y/=l2;
+      const n1x=-e1y*sg,n1y=e1x*sg,n2x=-e2y*sg,n2y=e2x*sg; let bx=n1x+n2x,by=n1y+n2y,bl=Math.hypot(bx,by); if(bl<1e-6){bx=n1x;by=n1y;bl=1;} bx/=bl; by/=bl;
+      const ch=bx*n1x+by*n1y; if(ch<0.3) return null; out.push([cx+bx*d/ch, cy+by*d/ch]); }
+    for(let k=0;k<n;k++){ const [ax,ay]=r[k],[bx2,by2]=r[(k+1)%n],[cx,cy]=out[k],[dx,dy]=out[(k+1)%n]; if((bx2-ax)*(dx-cx)+(by2-ay)*(dy-cy) <= 0) return null; }
+    const A2=area(out); if(A2*A<=0 || Math.abs(A2)>=Math.abs(A)) return null; return out; }
+  function shadeN(nx,ny,nz){ const L=Math.hypot(LX,LY,LZ); return 0.62+0.38*Math.max(0,(nx*LX+ny*LY+nz*LZ)/L); }
+  raw.b.forEach(([h,b,poi,rings],bi)=>{
+    const R=rings.map(decRing).map(r=>{ const n=r.length; return (n>1 && r[0][0]===r[n-1][0] && r[0][1]===r[n-1][1]) ? r.slice(0,-1) : r; }).filter(r=>r.length>=3);
+    if(!R.length) return;
+    const t=hash(bi+1), base = poi ? STONE : WALLS[Math.floor(t*WALLS.length)];
+    const wall = base.map(c=>c*(0.94+0.1*hash(bi*7+3)));
+    let roofC = poi ? LEAD : ROOFS[Math.floor(hash(bi*13+5)*ROOFS.length)];
+    const H=h-b;
+    // pareti con coordinate per le finestre
+    R.forEach(r=>{ const n=r.length; B3.ensure(n*4); let u=0;
       for(let k=0;k<n;k++){ const [ax,ay]=r[k],[bx,by]=r[(k+1)%n]; const L=Math.hypot(bx-ax,by-ay)||1; const nx=(by-ay)/L, ny=-(bx-ax)/L;
-        const sh=0.66+0.34*Math.abs(nx*LX+ny*LY)/Math.hypot(LX,LY); const c=base.map(v=>v*sh);
-        const v0=bld.vert(ax,ay,b,c); bld.vert(bx,by,b,c); bld.vert(bx,by,h,c); bld.vert(ax,ay,h,c); bld.i.push(v0,v0+1,v0+2,v0,v0+2,v0+3); } });
-    addPolygon(bld, R, h, roof);
+        const sh=0.64+0.36*Math.abs(nx*LX+ny*LY)/Math.hypot(LX,LY); const c=wall.map(v=>v*sh);
+        u=3.2-(L%3.2)/2; const T=poi?-H:H; const v0=B3.vert(ax,ay,b,c,u,0,T); B3.vert(bx,by,b,c,u+L,0,T); B3.vert(bx,by,h,c,u+L,H,T); B3.vert(ax,ay,h,c,u,H,T); B3.i.push(v0,v0+1,v0+2,v0,v0+2,v0+3); } });
+    // tetto
+    const outer=R[0], A=Math.abs(area(outer)), P=perim(outer);
+    let roofDone=false;
+    if (R.length===1 && outer.length<=60 && A>12){
+      const tower = H>30 && A<260;
+      let d = tower ? Math.sqrt(A)*0.45 : Math.min(7, 0.42*2*A/P), inner=null;
+      for(let tr=0; tr<5 && d>0.6 && !inner; tr++){ inner=insetRing(outer,d); if(!inner) d*=0.62; }
+      if (inner){
+        const rise = tower ? d*1.6 : d*0.48, z2=h+rise, n=outer.length;
+        B3.ensure(n*4+n);
+        for(let k=0;k<n;k++){ const [ax,ay]=outer[k],[bx,by]=outer[(k+1)%n],[cx,cy]=inner[(k+1)%n],[dx,dy]=inner[k];
+          // normale della falda
+          const ux=bx-ax,uy=by-ay,uz=0, vx=dx-ax,vy=dy-ay,vz=rise; let nx=uy*vz-uz*vy, ny=uz*vx-ux*vz, nz=ux*vy-uy*vx; const nl=Math.hypot(nx,ny,nz)||1; nx/=nl; ny/=nl; nz/=nl; if(nz<0){nx=-nx;ny=-ny;nz=-nz;}
+          const c=roofC.map(v=>v*shadeN(nx,ny,nz));
+          const v0=B3.vert(ax,ay,h,c,-1,0,0); B3.vert(bx,by,h,c,-1,0,0); B3.vert(cx,cy,z2,c,-1,0,0); B3.vert(dx,dy,z2,c,-1,0,0); B3.i.push(v0,v0+1,v0+2,v0,v0+2,v0+3); }
+        const coords=[]; inner.forEach(p=>coords.push(p[0],p[1])); const tri=earcut(coords,null,2); const ct=roofC.map(v=>v*shadeN(0,0,1));
+        const base0=B3.n; inner.forEach(p=>B3.vert(p[0],p[1],z2,ct,-1,0,0)); tri.forEach(x=>B3.i.push(base0+x));
+        roofDone=true;
+      }
+    }
+    if(!roofDone){ // tetto piano (o con cortili): coppi più scuri
+      const coords=[], holes=[]; let cnt=0; R.forEach((r,ri)=>{ if(ri>0) holes.push(cnt); r.forEach(p=>{coords.push(p[0],p[1]); cnt++;}); });
+      B3.ensure(cnt); const ct=roofC.map(v=>v*0.86); const base0=B3.n; R.forEach(r=>r.forEach(p=>B3.vert(p[0],p[1],h,ct,-1,0,0)));
+      earcut(coords, holes.length?holes:null, 2).forEach(x=>B3.i.push(base0+x));
+    }
   });
   const layer = {id:'vz3d', type:'custom', renderingMode:'3d', show:{lines:{}},
     onAdd(m, gl){
@@ -1251,7 +1285,36 @@ function makeVZLayer(){
       const lvs=`attribute vec2 p; attribute vec2 nrm; attribute vec3 c; uniform mat4 u; uniform float w; varying vec3 vc; void main(){ vc=c; gl_Position=u*vec4(p+nrm*w,0.0,1.0); }`;
       const lpr=gl.createProgram(); gl.attachShader(lpr,sh(gl.VERTEX_SHADER,lvs)); gl.attachShader(lpr,sh(gl.FRAGMENT_SHADER,fs)); gl.linkProgram(lpr);
       this.lpr=lpr; this.lP=gl.getAttribLocation(lpr,'p'); this.lN=gl.getAttribLocation(lpr,'nrm'); this.lC=gl.getAttribLocation(lpr,'c'); this.lM=gl.getUniformLocation(lpr,'u'); this.lW=gl.getUniformLocation(lpr,'w');
-      this.g={islands:up(flat.islands), canals:up(flat.canals), bld:up(bld), day:[], lines:LORDER.map(sn=>({sn,g:upL(lineB[sn])}))}; this._up=up; this.m=m;
+      const bvs=`attribute vec3 p; attribute vec3 c; attribute vec3 w; uniform mat4 u; varying vec3 vc; varying vec3 vw; void main(){ vc=c; vw=w; gl_Position=u*vec4(p,1.0); }`;
+      const bfs=`#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+ varying vec3 vc; varying vec3 vw; uniform float win;
+        void main(){ vec3 col=vc;
+          if (vw.x>=0.0){ float h=vw.y, H=abs(vw.z), wn=win*step(0.0,vw.z);
+            col *= mix(0.80,1.0,clamp(h/5.0,0.0,1.0));
+            if (h<0.6) col=mix(col, vec3(0.80,0.78,0.74), 0.75);
+            if (H-h<0.45 && H>4.0) col=mix(col, vec3(0.93,0.91,0.86), 0.7);
+            if (wn>0.01 && H>3.5){
+              float fx=mod(vw.x,3.2), fl=floor((h-1.0)/3.3), fy=mod(h-1.0,3.3);
+              float inW=step(1.0,fx)*step(fx,2.2)*step(0.55,fy)*step(fy,2.45);
+              float inF=step(0.85,fx)*step(fx,2.35)*step(0.4,fy)*step(fy,2.6);
+              float ok=step(1.0,h)*step(h,H-0.9);
+              float door=step(h,2.6)*step(0.0,h)*step(2.2,mod(vw.x+1.6,8.0))*step(mod(vw.x+1.6,8.0),3.6);
+              vec3 glass=vec3(0.20,0.22,0.24)+0.05*mod(fl,2.0);
+              col=mix(col, vec3(0.92,0.90,0.85), inF*ok*wn*0.9);
+              col=mix(col, glass, inW*ok*wn);
+              col=mix(col, vec3(0.27,0.22,0.19), door*wn*0.85*step(5.0,H));
+            }
+          }
+          gl_FragColor=vec4(col,1.0); }`;
+      const bpr=gl.createProgram(); gl.attachShader(bpr,sh(gl.VERTEX_SHADER,bvs)); gl.attachShader(bpr,sh(gl.FRAGMENT_SHADER,bfs)); gl.linkProgram(bpr);
+      this.bpr=bpr; this.bP=gl.getAttribLocation(bpr,'p'); this.bC=gl.getAttribLocation(bpr,'c'); this.bW=gl.getAttribLocation(bpr,'w'); this.bM=gl.getUniformLocation(bpr,'u'); this.bWin=gl.getUniformLocation(bpr,'win');
+      const upB=B=>B.chunks.filter(ch=>ch.i.length).map(ch=>{ const vb=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,vb); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(ch.v),gl.STATIC_DRAW);
+        const ib=gl.createBuffer(); gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(ch.i),gl.STATIC_DRAW); return {vb,ib,n:ch.i.length}; });
+      this.g={islands:up(flat.islands), canals:up(flat.canals), bld:upB(B3), day:[], lines:LORDER.map(sn=>({sn,g:upL(lineB[sn])}))}; this._up=up; this.m=m;
     },
     render(gl, matrix){
       const M = (matrix && matrix.length===16) ? matrix : (matrix && matrix.defaultProjectionData ? matrix.defaultProjectionData.mainMatrix : matrix);
@@ -1277,7 +1340,12 @@ function makeVZLayer(){
         gl.disableVertexAttribArray(this.lN); gl.disableVertexAttribArray(this.lC); gl.disableVertexAttribArray(this.lP);
         gl.useProgram(this.pr); gl.enableVertexAttribArray(this.aP); gl.enableVertexAttribArray(this.aC); }
       gl.enable(gl.DEPTH_TEST); gl.depthFunc(gl.LEQUAL); gl.depthMask(true); gl.clear(gl.DEPTH_BUFFER_BIT);
-      draw(this.g.bld);
+      gl.disableVertexAttribArray(this.aP); gl.disableVertexAttribArray(this.aC);
+      { const z=this.m.getZoom(); gl.useProgram(this.bpr); gl.uniformMatrix4fv(this.bM,false,out); gl.uniform1f(this.bWin, Math.max(0,Math.min(1,(z-15.4)/1.0)));
+        gl.enableVertexAttribArray(this.bP); gl.enableVertexAttribArray(this.bC); gl.enableVertexAttribArray(this.bW);
+        this.g.bld.forEach(g=>{ gl.bindBuffer(gl.ARRAY_BUFFER,g.vb); gl.vertexAttribPointer(this.bP,3,gl.FLOAT,false,36,0); gl.vertexAttribPointer(this.bC,3,gl.FLOAT,false,36,12); gl.vertexAttribPointer(this.bW,3,gl.FLOAT,false,36,24); gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,g.ib); gl.drawElements(gl.TRIANGLES,g.n,gl.UNSIGNED_SHORT,0); });
+        gl.disableVertexAttribArray(this.bW); gl.disableVertexAttribArray(this.bC); gl.disableVertexAttribArray(this.bP);
+        gl.useProgram(this.pr); gl.enableVertexAttribArray(this.aP); gl.enableVertexAttribArray(this.aC); }
       gl.disableVertexAttribArray(this.aC);
     }};
   return layer;
@@ -1380,7 +1448,7 @@ function setDay(i){
     if (vzLayer){ vzLayer.dayPending = dayStopsCur.map(s=>[s.p.lng,s.p.lat]); map.triggerRepaint(); }
     const b = new maplibregl.LngLatBounds(); dayStopsCur.forEach(s=>b.extend([s.p.lng,s.p.lat]));
     const cam = map.cameraForBounds(b, {padding:{top:120,bottom:240,left:40,right:70}, maxZoom:16.5});
-    if (cam) map.flyTo({center:cam.center, zoom:cam.zoom - (is3D?0.9:0.1), pitch:is3D?45:0, bearing:is3D?-18:0, duration:1200});
+    if (cam) map.flyTo({center:cam.center, zoom:cam.zoom - (is3D?0.45:0.1), pitch:is3D?45:0, bearing:is3D?-18:0, duration:1200});
   } else drawSchema();
   renderDayPanel(false);
 }
