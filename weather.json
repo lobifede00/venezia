@@ -1,38 +1,38 @@
 {
- "updated": "10 nov",
- "note": "Temperature: iLMeteo.it (aggiornate il 9 novembre). Cielo: Centro Meteo Italiano e 3BMeteo. A 6–9 giorni di distanza le fonti non sono ancora d'accordo, soprattutto su martedì: ricontrollate il giorno prima.",
+ "updated": "12 nov, 07:00",
+ "note": "Fonti: 3BMeteo (11 nov sera e 12 nov mattina), Centrometeo e Meteored (12 nov), Meteo & Radar (12 nov). Lunedì e martedì tutte danno pioggia; mercoledì 3BMeteo dà poco nuvoloso ma le altre pioggia debole (scelta la più prudente); giovedì solo Centrometeo arriva così lontano. Le maree del Centro Maree escono 2-3 giorni prima: ricontrollatele.",
  "days": [
   {
    "d": "Lun 16",
-   "ico": "⛅",
-   "min": 4,
-   "max": 11,
-   "sky": "Nuvoloso, piogge poco probabili",
-   "tip": "Giornata asciutta per il Canal Grande e il Campanile."
-  },
-  {
-   "d": "Mar 17",
    "ico": "🌧️",
    "min": 8,
    "max": 11,
-   "sky": "Coperto, possibile pioggia",
-   "tip": "Portate l'ombrello: le fonti vanno da “coperto” a “pioggia moderata”. L'Arsenale è al coperto."
+   "sky": "Pioggia, vento di scirocco",
+   "tip": "Ombrello e scarpe impermeabili. Con lo scirocco forte la marea può salire: controllate il Centro Maree."
+  },
+  {
+   "d": "Mar 17",
+   "ico": "🌦️",
+   "min": 7,
+   "max": 11,
+   "sky": "Nebbia al mattino, pioggia in serata",
+   "tip": "Visite all'aperto al mattino-pomeriggio; la sera tenete l'ombrello a portata."
   },
   {
    "d": "Mer 18",
    "ico": "🌦️",
    "min": 9,
-   "max": 12,
-   "sky": "Nubi e schiarite",
-   "tip": "Qualche pioggia possibile: in laguna fa più freddo, vestitevi a strati."
+   "max": 14,
+   "sky": "Nuvoloso, pioggia debole a tratti",
+   "tip": "Fonti in disaccordo: vestitevi a strati e portate un k-way."
   },
   {
    "d": "Gio 19",
-   "ico": "🌥️",
+   "ico": "🌤️",
    "min": 10,
-   "max": 13,
-   "sky": "Velato, pioggia leggera possibile",
-   "tip": "Il giorno più mite."
+   "max": 15,
+   "sky": "Poco nuvoloso, probabilmente asciutto",
+   "tip": "Il giorno più mite e asciutto: ideale per una passeggiata alle Zattere."
   }
  ]
 }
