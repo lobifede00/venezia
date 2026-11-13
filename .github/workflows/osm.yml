@@ -13,8 +13,8 @@ jobs:
       - name: Overpass
         run: |
           for q in water land extra; do
-            for ep in https://overpass-api.de/api/interpreter https://overpass.kumi.systems/api/interpreter; do
-              curl -sS --fail -m 300 --data-urlencode data@osm/query_$q.txt "$ep" -o osm/$q.json && break
+            for ep in https://overpass-api.de/api/interpreter https://overpass.private.coffee/api/interpreter https://maps.mail.ru/osm/tools/overpass/api/interpreter https://overpass.kumi.systems/api/interpreter; do
+              curl -sS --fail -m 300 -A "venezia-trip-app/1.0 (https://github.com/lobifede00/venezia)" -H "Accept: application/json" --data-urlencode data@osm/query_$q.txt "$ep" -o osm/$q.json && break
               sleep 20
             done
             gzip -9 -f osm/$q.json
