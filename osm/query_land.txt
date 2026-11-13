@@ -1,0 +1,7 @@
+[out:json][timeout:180];
+(
+  way["place"~"island|islet"](45.405,12.29,45.50,12.44);
+  relation["place"~"island|islet"](45.405,12.29,45.50,12.44);
+  way["natural"="coastline"](45.405,12.29,45.50,12.44);
+);
+out geom;

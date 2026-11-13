@@ -1,0 +1,29 @@
+name: osm-fetch
+on:
+  push:
+    branches: [osm-fetch]
+    paths: ['osm/query_*.txt', '.github/workflows/osm.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Overpass
+        run: |
+          for q in water land extra; do
+            for ep in https://overpass-api.de/api/interpreter https://overpass.kumi.systems/api/interpreter; do
+              curl -sS --fail -m 300 --data-urlencode data@osm/query_$q.txt "$ep" -o osm/$q.json && break
+              sleep 20
+            done
+            gzip -9 -f osm/$q.json
+            ls -la osm
+          done
+      - name: Commit
+        run: |
+          git config user.name "lobifede00"
+          git config user.email "lobifede00@users.noreply.github.com"
+          git add osm/*.json.gz
+          git commit -m "OSM data" || echo nothing
+          git push

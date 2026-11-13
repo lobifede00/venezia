@@ -1,0 +1,10 @@
+[out:json][timeout:180];
+(
+  way["man_made"="bridge"](45.405,12.29,45.50,12.44);
+  relation["man_made"="bridge"](45.405,12.29,45.50,12.44);
+  way["leisure"~"park|garden"](45.405,12.29,45.50,12.44);
+  relation["leisure"~"park|garden"](45.405,12.29,45.50,12.44);
+  way["landuse"~"grass|meadow|cemetery|recreation_ground"](45.405,12.29,45.50,12.44);
+  way["man_made"="pier"](45.405,12.29,45.50,12.44);
+);
+out geom;
