@@ -1,30 +1,30 @@
 {
- "updated": "12 nov, 07:00",
- "note": "Fonti: 3BMeteo (11 nov sera e 12 nov mattina), Centrometeo e Meteored (12 nov), Meteo & Radar (12 nov). Lunedì e martedì tutte danno pioggia; mercoledì 3BMeteo dà poco nuvoloso ma le altre pioggia debole (scelta la più prudente). Le maree del Centro Maree escono 2-3 giorni prima: ricontrollatele.",
+ "updated": "13 nov, 06:50",
+ "note": "Fonti: 3BMeteo (12 nov ore 03), Meteored (12 nov ore 09) e iLMeteo (12 nov ore 15:40). Lunedì e martedì tutte danno pioggia (martedì più forte dal pomeriggio); mercoledì 3BMeteo dà parz. nuvoloso, iLMeteo e Meteored pioggia debole al mattino: scelta la più prudente. Il Centro Maree non ha ancora uscite per 16-18 nov e in questi giorni ci sono picchi sopra 100 cm: ricontrollate.",
  "days": [
   {
    "d": "Lun 16",
    "ico": "🌧️",
    "min": 8,
-   "max": 11,
-   "sky": "Pioggia, vento di scirocco",
-   "tip": "Ombrello e scarpe impermeabili. Con lo scirocco forte la marea può salire: controllate il Centro Maree."
+   "max": 10,
+   "sky": "Pioggia per gran parte del giorno",
+   "tip": "Ombrello e scarpe impermeabili; in vaporetto meglio i posti al coperto. Tramonto sul Bacino poco probabile: allungate Palazzo Ducale e San Marco."
   },
   {
    "d": "Mar 17",
-   "ico": "🌦️",
-   "min": 7,
+   "ico": "🌧️",
+   "min": 6,
    "max": 11,
-   "sky": "Nebbia al mattino, pioggia in serata",
-   "tip": "Giornata in laguna: al mattino nebbia sull'acqua, portate un k-way e l'ombrello per la sera."
+   "sky": "Coperto, pioggia dal pomeriggio",
+   "tip": "Partite presto: Burano al mattino quando è ancora asciutto, Murano (fornaci al coperto) nel pomeriggio. K-way e strati caldi per le ore in barca."
   },
   {
    "d": "Mer 18",
    "ico": "🌦️",
-   "min": 9,
+   "min": 8,
    "max": 14,
-   "sky": "Nuvoloso, pioggia debole a tratti",
-   "tip": "Fonti in disaccordo: k-way per i Giardini e un ombrello pieghevole nel bagaglio a mano."
+   "sky": "Nuvoloso, pioviggine al mattino",
+   "tip": "Ai Giardini k-way o ombrello pieghevole, molti padiglioni sono all'aperto. Lasciate i bagagli in deposito e tenetevi margine per il treno dopo le 13."
   }
  ]
 }
