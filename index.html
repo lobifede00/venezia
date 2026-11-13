@@ -241,6 +241,8 @@ table.tk tr.best td{background:var(--oro-chiaro)}
 .mus-card .kv2{font-size:13px;margin:4px 0}.mus-card .kv2 b{color:var(--laguna)}
 .mus-card.closed{opacity:.8}
 .mk.mus{background:#6b5b95}
+.mus-card .tag{display:inline-block;white-space:nowrap;margin-bottom:3px}
+.mus-card .tag.pass{background:var(--oro);color:var(--laguna)}.mus-card .tag.inplan{background:var(--laguna)}.mus-card .tag.priv{background:#8a6d3b}
 
 /* hotel */
 .hotel-hero{border-radius:20px;overflow:hidden;background:var(--laguna);color:#fff;margin-bottom:12px}
@@ -417,13 +419,14 @@ details.faq p{margin:8px 0 0;font-size:14px;color:#334}
       <div class="sec-title"><h2>Musei pubblici</h2><span>civici e statali</span></div>
       <div class="card">
         <p style="margin:0 0 8px;font-size:14px">A Venezia i musei pubblici sono di due famiglie. I <b>Musei Civici</b> appartengono al Comune e sono gestiti dalla Fondazione MUVE: c'è un biglietto unico, il Museum Pass. I <b>musei statali</b> dipendono dal Ministero della Cultura e hanno biglietti separati.</p>
-        <div class="note small"><b>Il biglietto giusto per voi</b><br>
-        ① Per il <b>Palazzo Ducale</b> prenotate gli <b>Itinerari Segreti</b> (€ 40 a testa): la visita guidata comprende anche il resto del Palazzo, quindi non serve il biglietto normale da € 35.<br>
-        ② Se martedì entrate al <b>Museo del Vetro</b> o al <b>Merletto</b>, il biglietto "Musei delle Isole" costa € 20.<br>
-        ③ Gallerie dell'Accademia, Palazzo Grimani, Museo Ebraico e Museo Navale hanno biglietti a parte.</div>
+        <div class="note small"><b>🎟️ Il vostro Junior City Pass "All Venice + Fenice"</b><br>
+        Comprende un ingresso al <b>Palazzo Ducale</b> e agli altri <b>12 Musei Civici</b>, alla <b>Scuola Grande dei Carmini</b>, alla <b>Fondazione Querini Stampalia</b> e la <b>visita con audioguida della Fenice</b>. Basta mostrare il voucher all'ingresso. Non comprende i vaporetti.<br>
+        <b>Nel programma ne usate 6</b>, scelti tra i più belli e quelli sul vostro percorso: Palazzo Ducale, Museo del Merletto, Museo del Vetro, Teatro La Fenice, Querini Stampalia. I musei con il bollino 🎟️ sono compresi.<br>
+        <b>Itinerari Segreti</b> del Ducale (consiglio dell'amico): non sono nel pass, € 40 a testa. Se preferite risparmiare, fate la visita libera del Ducale col pass.</div>
       </div>
       <div class="chips" id="mus-chips">
         <button class="chip on" data-md="-1">Tutti</button>
+        <button class="chip" data-md="-2">🎟️ Nel pass</button>
         <button class="chip" data-md="0">Aperti lun 16</button>
         <button class="chip" data-md="1">mar 17</button>
         <button class="chip" data-md="2">mer 18</button>
@@ -600,7 +603,7 @@ const PLACES = [
   {id:'campanile', type:'sight', ico:'🔔', name:'Campanile di San Marco', lat:45.43395, lng:12.33895, q:'Campanile di San Marco, Venezia', desc:'La vista migliore sulla città e sulla laguna. Salite al tramonto, verso le 16:40.'},
   {id:'ducale', type:'sight', ico:'🏰', name:'Palazzo Ducale', lat:45.43370, lng:12.34040, q:'Palazzo Ducale, Venezia', desc:'La sede dei Dogi, con il Ponte dei Sospiri e le prigioni. Biglietto 35 € (include i Musei di Piazza San Marco).', url:'https://palazzoducale.visitmuve.it'},
   {id:'sospiri', type:'sight', ico:'🌉', name:'Ponte dei Sospiri', lat:45.43405, lng:12.34085, q:'Ponte dei Sospiri, Venezia', desc:'Si vede bene dal Ponte della Paglia, sulla Riva degli Schiavoni.'},
-  {id:'fenice', type:'sight', ico:'🎭', name:'Teatro La Fenice', lat:45.43370, lng:12.33380, q:'Teatro La Fenice, Venezia', desc:'A 2 minuti dall\'hotel. Visite diurne con audioguida; la sera, se trovate posti, un\'opera o un concerto.'},
+  {id:'fenice', type:'sight', ico:'🎭', name:'Teatro La Fenice', lat:45.43369, lng:12.33314, q:'Teatro La Fenice, Campo San Fantin 1965, Venezia', desc:'A 2 minuti dall\'hotel. La visita con audioguida è compresa nel vostro City Pass (9:30–18, orari che cambiano con le prove). In scena c\'è Fedora di Giordano: martedì 17 alle 19 (biglietti a parte).', url:'https://www.teatrolafenice.it'},
   {id:'bovolo', type:'sight', ico:'🌀', name:'Scala Contarini del Bovolo', lat:45.43500, lng:12.33430, q:'Scala Contarini del Bovolo, Venezia', desc:'Scala a chiocciola gotica nascosta in una corte, con terrazza panoramica. Una piccola sorpresa vicino all\'hotel.'},
   {id:'rialto', type:'sight', ico:'🌉', name:'Ponte di Rialto', lat:45.43800, lng:12.33590, q:'Ponte di Rialto, Venezia', desc:'Il ponte più famoso sul Canal Grande. Dall\'hotel sono 10–12 minuti a piedi.'},
   {id:'mercato', type:'sight', ico:'🐟', name:'Mercato di Rialto', lat:45.43950, lng:12.33430, q:'Mercato di Rialto Pescheria, Venezia', desc:'Pescheria e frutta e verdura: andate la mattina, entro le 11. La pescheria è chiusa domenica e lunedì.'},
@@ -778,7 +781,7 @@ const DAYS = [
     {t:'11:00', k:'move', h:'Arrivo a Venezia Santa Lucia', p:'Scesi i gradini della stazione ci sono le macchinette ACTV: ritirate con il codice a barre le tessere comprate online (pass 72 ore, € 45 a testa).', pl:'s-ferrovia'},
     {t:'11:12', k:'move', h:'Linea 1 lungo tutto il Canal Grande', p:'Pontile E, corse alle 11:12, 11:24 e 11:36. Circa 35 minuti tra i palazzi: scendete a S. Maria del Giglio.', pl:'s-giglio', line:'1'},
     {t:'12:00', k:'move', h:'Valigie in hotel', p:'Il check-in è dalle 15: lasciate i bagagli alla reception e andate subito al Palazzo Ducale (7 minuti).', pl:'hotel'},
-    {t:'12:30', k:'sight', h:'Itinerari Segreti di Palazzo Ducale', p:'La visita che il vostro amico considera la più bella di Venezia: la storia dei dogi, la cella e l\'evasione di Casanova dai Piombi, fino a passare dentro il Ponte dei Sospiri. Guida in italiano, 1 ora e un quarto; poi proseguite liberi nel resto del Palazzo. Solo su prenotazione, € 40.', pl:'ducale'},
+    {t:'12:30', k:'sight', h:'Palazzo Ducale con gli Itinerari Segreti', p:'La visita che il vostro amico considera la più bella di Venezia: la storia dei dogi, la cella e l\'evasione di Casanova dai Piombi, fino a passare dentro il Ponte dei Sospiri. Guida in italiano, 1 ora e un quarto, poi proseguite liberi nel resto del Palazzo. Solo su prenotazione, € 40 a parte: non sono nel pass.', pl:'ducale', alt:'Per risparmiare: visita libera del Ducale, compresa nel vostro City Pass (2 ore).'},
     {t:'14:45', k:'food', h:'Pranzo tardo al Bacaro Risorto', p:'A 3 minuti dal Ducale, verso San Zaccaria: crostini sfiziosi dalla vetrina e un\'ombra. I bacari servono tutto il giorno.', pl:'risorto'},
     {t:'15:45', k:'sight', h:'Basilica di San Marco', p:'Prenotate la fascia delle 15:45 (ultimo accesso 16:45). Aggiungete la Pala d\'Oro.', pl:'basilica'},
     {t:'16:30', k:'sight', h:'Scala Contarini del Bovolo al tramonto', p:'Il sole tramonta verso le 16:40: dalla cima della scala a chiocciola la vista sulla Serenissima è mozzafiato. Prenotate la fascia oraria.', pl:'bovolo'},
@@ -792,20 +795,21 @@ const DAYS = [
     {t:'09:40', k:'sight', h:'Ghetto ebraico e Museo Ebraico', p:'15 minuti a piedi lungo la Strada Nova. Il museo ha riaperto a fine ottobre dopo sette anni: apre alle 10 e comprende la visita alle sinagoghe. Prenotate online. Biglietto € 18.', pl:'ghetto'},
     {t:'11:40', k:'move', h:'A piedi a Fondamente Nove', p:'Circa 15 minuti dal Ghetto, attraverso Cannaregio.', pl:'s-fnove'},
     {t:'12:10', k:'move', h:'Linea 12 per Burano', p:'Partenze alle :10 e alle :40 dal pontile A, gratis con la tessera. Circa 42 minuti attraverso la laguna nord.', pl:'s-fnove', line:'12'},
-    {t:'13:00', k:'food', h:'Pranzo da Al Gatto Nero', p:'Risotto di gò alla buranella. Martedì è aperto a pranzo: prenotate.', pl:'gattonero'},
-    {t:'14:30', k:'sight', h:'Burano a piedi', p:'Coloratissima, non c\'è nulla da prenotare: girate a piedi e fermatevi a sbirciare le merlettaie al lavoro (Museo del Merletto aperto fino alle 16).', pl:'burano'},
-    {t:'15:25', k:'move', h:'Linea 12 per Murano', p:'Partenze da Burano alle :25 e alle :55: circa 30 minuti fino a Murano Faro.', pl:'murano', line:'12'},
-    {t:'16:00', k:'sight', h:'Murano e le vetrerie', p:'Quasi tutte le vetrerie fanno una piccola dimostrazione prima di farvi entrare nel negozio. Non comprate nei negozi di souvenir: per un vetro vero chiedete all\'amico dove andare.', pl:'murano'},
+    {t:'13:00', k:'food', h:'Pranzo da Al Gatto Nero', p:'Risotto di gò alla buranella. Martedì è aperto a pranzo: prenotate per le 13 e chiedete di non fare tardi.', pl:'gattonero'},
+    {t:'14:10', k:'sight', h:'Museo del Merletto e Burano a piedi', p:'Mezz\'ora al museo (compreso nel pass), dove spesso ci sono merlettaie al lavoro, poi un giro tra le case colorate: non c\'è nulla da prenotare.', pl:'m-merletto'},
+    {t:'14:55', k:'move', h:'Linea 12 per Murano', p:'Partenze da Burano alle :25 e alle :55: circa 30 minuti fino a Murano Faro.', pl:'murano', line:'12'},
+    {t:'15:35', k:'sight', h:'Museo del Vetro', p:'8 minuti a piedi da Murano Faro, compreso nel pass. Ultimo ingresso alle 16: dalla Coppa Barovier del Quattrocento ai vetri di Venini e Scarpa.', pl:'m-vetro'},
+    {t:'16:35', k:'sight', h:'Una vetreria vera', p:'Quasi tutte le vetrerie fanno una piccola dimostrazione prima di farvi entrare nel negozio; molte chiudono verso le 17. Non comprate nei negozi di souvenir: per un vetro vero chiedete all\'amico dove andare.', pl:'murano'},
     {t:'17:29', k:'move', h:'Linea 4.2 fino a Fondamente Nove', p:'Da Murano Faro circa 10 minuti (partenze alle :09, :29, :49), poi 10 minuti a piedi verso la Ca\' d\'Oro.', pl:'s-fnove', line:'4.2'},
-    {t:'18:15', k:'food', h:'Polpette alla Vedova', p:'Le polpette di carne «divine» del vostro amico, con un\'ombra al banco.', pl:'vedova'},
+    {t:'18:15', k:'food', h:'Polpette alla Vedova', p:'Le polpette di carne «divine» del vostro amico, con un\'ombra al banco.', pl:'vedova', alt:'Serata alternativa: alle 19 alla Fenice va in scena Fedora di Giordano (biglietti a parte, prenotate subito). Da Murano prendete la 4.2 fino a S. Zaccaria e cenate dopo lo spettacolo.'},
     {t:'20:00', k:'food', h:'Pizza da La Perla', p:'Per il vostro amico la più buona di Venezia, davanti al cinema Giorgione. Non serve prenotare. Ritorno con la linea 1 da Ca\' d\'Oro al Giglio (circa 20 minuti).', pl:'perla', alt:'Se preferite cucina veneziana: Osteria al Cicheto, per seppie con la polenta e fegato alla veneziana (prenotate).'},
   ]},
-  {d:'Mer', n:18, title:'La Fenice, Acqua Alta e partenza', sub:'Un teatro, una libreria magica, poi il treno dopo le 13', items:[
+  {d:'Mer', n:18, title:'La Fenice, Acqua Alta e partenza', sub:'Il teatro, una libreria magica, il giardino di Scarpa e il treno dopo le 13', items:[
     {t:'08:30', k:'move', h:'Colazione e check-out', p:'Lasciate le valigie in reception: le riprendete verso mezzogiorno.', pl:'hotel'},
-    {t:'09:30', k:'sight', h:'Teatro La Fenice con l\'audioguida', p:'A 2 minuti dall\'hotel. L\'audioguida racconta la storia degli incendi e delle ricostruzioni. Gli orari di visita cambiano con le prove: controllate il calendario il giorno prima.', pl:'fenice'},
+    {t:'09:30', k:'sight', h:'Teatro La Fenice con l\'audioguida', p:'A 2 minuti dall\'hotel, compresa nel vostro City Pass. Un\'ora tra la sala d\'oro e azzurro, il Palco Reale e le Sale Apollinee; l\'audioguida racconta gli incendi e le ricostruzioni. Gli orari cambiano con le prove: controllate il calendario la sera prima.', pl:'fenice'},
     {t:'10:45', k:'sight', h:'Libreria Acqua Alta', p:'Circa 12 minuti a piedi, a Castello: una libreria magica di gatti e colori, con libri in gondole e vasche da bagno. Non serve prenotare.', pl:'acquaalta'},
-    {t:'11:30', k:'food', h:'Ultimo cicchetto al Bacaro Risorto', p:'Sulla strada del ritorno, in Campo San Provolo: un crostino e un\'ombra per salutare Venezia.', pl:'risorto'},
-    {t:'11:55', k:'move', h:'Ritiro valigie in hotel', p:'Circa 10 minuti a piedi da San Zaccaria.', pl:'hotel'},
+    {t:'11:10', k:'sight', h:'Fondazione Querini Stampalia', p:'A 2 minuti dalla libreria, compresa nel pass: il piano terra e il giardino di Carlo Scarpa, con l\'acqua del canale che entra nel palazzo, e la casa-museo con Bellini e Longhi. Basta mezz\'ora.', pl:'m-querini'},
+    {t:'11:45', k:'move', h:'Ritiro valigie in hotel', p:'Circa 12 minuti a piedi da Santa Maria Formosa, passando per Piazza San Marco.', pl:'hotel'},
     {t:'12:10', k:'move', h:'Linea 1 dal Giglio alla stazione', p:'Corse alle 12:10 e alle 12:22, circa 36 minuti: arrivate a Ferrovia verso le 12:50, in tempo per il treno dopo le 13. Il pass 72 ore è ancora valido.', pl:'s-ferrovia', line:'1'},
   ]},
 ];
@@ -839,11 +843,12 @@ const BOOKINGS = [
   {id:'pampo', label:'Osteria da Pampo', when:'Lun 16 · cena 19:45', tel:'+390415208419'},
   {id:'ghetto', label:'Museo Ebraico e sinagoghe', when:'Mar 17 · ore 10:00', url:'https://www.museoebraico.it'},
   {id:'gattonero', label:'Al Gatto Nero, Burano', when:'Mar 17 · pranzo 13:00', tel:'+39041730120'},
-  {id:'fenice', label:'Teatro La Fenice (audioguida)', when:'Mer 18 · ore 9:30', url:'https://www.teatrolafenice.it'},
+  {id:'fenice', label:'Teatro La Fenice (audioguida, nel pass)', when:'Mer 18 · ore 9:30', url:'https://www.teatrolafenice.it'},
+  {id:'fedora', label:'Facoltativo: Fedora alla Fenice', when:'Mar 17 · ore 19:00', url:'https://www.teatrolafenice.it'},
 ];
 const LINE1_PATH = [[12.31879,45.43942],[12.31889,45.43931],[12.31954,45.43934],[12.32016,45.43941],[12.32067,45.43953],[12.32099,45.43971],[12.322,45.44068],[12.3225,45.44102],[12.32448,45.44178],[12.32642,45.44234],[12.32793,45.44239],[12.32894,45.44231],[12.3302,45.44209],[12.33103,45.44182],[12.33201,45.44135],[12.33372,45.44042],[12.33511,45.43978],[12.33546,45.43956],[12.33565,45.43937],[12.33571,45.43918],[12.3357,45.43833],[12.33563,45.43796],[12.33551,45.43774],[12.33515,45.43746],[12.33404,45.43692],[12.33243,45.43639],[12.32992,45.43573],[12.32795,45.43503],[12.32774,45.43483],[12.32752,45.43446],[12.32738,45.43401],[12.32735,45.43364],[12.32738,45.43344],[12.3276,45.43283],[12.32793,45.43238],[12.3282,45.43214],[12.32867,45.43181],[12.32904,45.43165],[12.32962,45.43147],[12.33066,45.43129],[12.3321,45.43123],[12.3375,45.43161],[12.3385,45.4318],[12.341,45.4323],[12.3432,45.4328],[12.347,45.4327],[12.3505,45.4324],[12.354,45.4302],[12.3563,45.4289]];
 
-const CHECK = ['Scaricare l\'app hi!tide Venice (acqua alta)','Scarpe impermeabili e ombrello','Pass ACTV 72 ore comprato online: in stazione si ritira alle macchinette col codice a barre','Monete o carta per bagni pubblici e traghetti (€ 1,50 e € 2)','Biglietto del treno di ritorno (giovedì dalle 14)','Installare l\'app sulla schermata Home'];
+const CHECK = ['Scaricare l\'app hi!tide Venice (acqua alta)','Scarpe impermeabili e ombrello','Pass ACTV 72 ore comprato online: in stazione si ritira alle macchinette col codice a barre','Voucher del Junior City Pass sul telefono (si mostra all\'ingresso di musei e Fenice)','Monete o carta per bagni pubblici e traghetti (€ 1,50 e € 2)','Biglietto del treno di ritorno (giovedì dalle 14)','Installare l\'app sulla schermata Home'];
 
 /* ============ UTILS ============ */
 const $ = s => document.querySelector(s);
@@ -852,12 +857,17 @@ const MUSEI = [
    hours:'Tutti i giorni 9–18, ultimo ingresso 17.', ticket:'Biglietto Musei di Piazza San Marco: € 35 (ridotto € 15). Comprende anche Correr, Museo Archeologico e Biblioteca Marciana.',
    intro:'Per quasi mille anni è stato il cuore della Repubblica: casa del Doge, sede dei consigli e dei tribunali, e prigione. È il monumento da non perdere.',
    inside:['La Scala dei Giganti e la Scala d\'Oro, con la volta a stucchi dorati','La Sala del Maggior Consiglio, con il <i>Paradiso</i> di Tintoretto e i ritratti dei Dogi (con il drappo nero sul traditore Marin Faliero)','Le sale del Collegio e del Senato, con soffitti di Veronese e Tintoretto','L\'Armeria, poi il Ponte dei Sospiri e le Prigioni Nuove'],
-   tip:'Nel vostro programma: lunedì alle 12:30 con gli <b>Itinerari Segreti</b> (€ 40, guida in italiano alle 11 o alle 12:30, solo su prenotazione), poi visita libera del resto. Due quadri (il <i>Ratto d\'Europa</i> di Veronese e un Bassano) sono in restauro e al loro posto ci sono copie.', url:'https://palazzoducale.visitmuve.it'},
+   tip:'Nel vostro programma lunedì alle 12:30. La visita libera è compresa nel pass; gli <b>Itinerari Segreti</b> consigliati dall\'amico costano € 40 a parte (guida in italiano alle 11 o alle 12:30, solo su prenotazione) e comprendono anche il resto del Palazzo. Due quadri (il <i>Ratto d\'Europa</i> di Veronese e un Bassano) sono in restauro e al loro posto ci sono copie.', url:'https://palazzoducale.visitmuve.it'},
   {id:'m-correr', kind:'civ', name:'Museo Correr, Museo Archeologico e Biblioteca Marciana', area:'Piazza San Marco, lato opposto alla Basilica', lat:45.43390, lng:12.33725, ico:'🏛',
    open:['y','y','y','y'], hours:'Tutti i giorni 10–17, ultimo ingresso 16.', ticket:'Incluso nel biglietto del Palazzo Ducale (un ingresso per museo).',
    intro:'Nelle sale del palazzo reale fatto costruire da Napoleone in Piazza: la storia e l\'arte di Venezia raccontate dalle sue collezioni civiche.',
    inside:['Le sale neoclassiche con le sculture di Canova, tra cui <i>Dedalo e Icaro</i>','La Quadreria: Giovanni Bellini, Antonello da Messina e le <i>Due dame veneziane</i> di Carpaccio','La grande veduta di Venezia di Jacopo de\' Barbari (1500), monete, globi e le sale dell\'imperatrice Sissi','Museo Archeologico: sculture greche e romane collezionate dai Grimani','Biblioteca Marciana: la Libreria del Sansovino con i tondi dipinti da Veronese e Tiziano'],
-   tip:'È già pagato con il Ducale: entrate subito dopo, oppure tornate un altro giorno.', url:'https://correr.visitmuve.it'},
+   tip:'Compreso nel pass. Non è nel programma per mancanza di tempo: se lunedì il Ducale finisce presto, la Biblioteca Marciana da sola vale la sosta (chiude alle 17).', url:'https://correr.visitmuve.it'},
+  {id:'fenice', pl:'fenice', kind:'priv', name:'Teatro La Fenice', area:'San Marco · Campo San Fantin, 2 minuti dall\'hotel', open:['y','y','y','y'],
+   hours:'Visite tutti i giorni 9:30–18 (primo e ultimo ingresso), con cambi dell\'ultimo minuto per prove e spettacoli.', ticket:'Visita con audioguida compresa nel vostro City Pass. L\'opera si paga a parte.',
+   intro:'Il teatro d\'opera più famoso d\'Italia dopo la Scala: bruciato e ricostruito due volte ("la Fenice" rinasce dalle sue ceneri), l\'ultima dopo l\'incendio del 1996.',
+   inside:['La sala a cinque ordini di palchi, oro e azzurro, ricostruita "com\'era e dov\'era"','Il Palco Reale','Le Sale Apollinee e il foyer','La mostra dedicata a Maria Callas e ai suoi anni veneziani'],
+   tip:'Nel programma mercoledì alle 9:30. E se volete vivere il teatro di sera: martedì 17 alle 19 c\'è <i>Fedora</i> di Giordano, l\'opera che apre la stagione.', url:'https://www.teatrolafenice.it'},
   {id:'m-rezzonico', kind:'civ', name:'Ca\' Rezzonico · Museo del Settecento Veneziano', area:'Dorsoduro · fermata Ca\' Rezzonico (linea 1)', lat:45.43375, lng:12.32665, ico:'🕯',
    open:['y','n','y','y'], hours:'10–17, chiuso il martedì.', ticket:'Nel biglietto "Musei del Settecento" (€ 20 con Mocenigo e Casa Goldoni) o nel Museum Pass.',
    intro:'Un palazzo barocco sul Canal Grande arredato come la casa di una famiglia nobile del Settecento: il secolo di Tiepolo, Canaletto, Goldoni e Casanova.',
@@ -892,12 +902,12 @@ const MUSEI = [
    open:['y','y','y','y'], hours:'Tutti i giorni 10–17, ultimo ingresso 16.', ticket:'Nel biglietto "Musei delle Isole" (€ 20 con Merletto e Torcello) o nel Museum Pass.',
    intro:'Nel palazzo dei vescovi di Torcello sul canale di Murano: la storia del vetro dall\'antichità romana a oggi.',
    inside:['Vetri romani e la <i>Coppa Barovier</i>, una coppa nuziale smaltata del Quattrocento','Murrine, specchi, lampadari e vetri soffiati del Rinascimento e del Settecento','I vetri del Novecento: Venini, Carlo Scarpa e i grandi designer','La produzione contemporanea delle fornaci dell\'isola'],
-   tip:'Martedì pomeriggio siete a Murano: ci vuole circa un\'ora.', url:'https://museovetro.visitmuve.it'},
+   tip:'Nel programma martedì alle 15:35, compreso nel pass. Ultimo ingresso alle 16: non tardate.', url:'https://museovetro.visitmuve.it'},
   {id:'m-merletto', kind:'civ', name:'Museo del Merletto', area:'Burano · Piazza Galuppi', lat:45.48545, lng:12.41755, ico:'🪡',
    open:['n','y','y','y'], hours:'10–16, ultimo ingresso 15:30, chiuso il lunedì.', ticket:'Nel biglietto "Musei delle Isole" (€ 20) o nel Museum Pass.',
    intro:'Nella sede della storica Scuola di Merletti di Burano, attiva dal 1872 al 1970.',
    inside:['Oltre cento merletti dal Cinquecento al Novecento','Il "punto Burano" e le tecniche ad ago','Spesso ci sono merlettaie al lavoro: le potete guardare da vicino'],
-   tip:'Martedì mattina, prima del pranzo al Gatto Nero. Chiude alle 16.', url:'https://museomerletto.visitmuve.it'},
+   tip:'Nel programma martedì alle 14:10, dopo pranzo; compreso nel pass. Chiude alle 16.', url:'https://museomerletto.visitmuve.it'},
   {id:'m-torcello', kind:'civ', name:'Museo di Torcello', area:'Torcello · alcune corse della linea 12, oppure linea 9 da Burano', lat:45.49750, lng:12.41850, ico:'🏺',
    open:['n','y','y','y'], hours:'11–17, chiuso il lunedì.', ticket:'Nel biglietto "Musei delle Isole" (€ 20) o nel Museum Pass.',
    intro:'Racconta le origini di Venezia, nell\'isola dove la laguna fu abitata prima della città.',
@@ -908,6 +918,16 @@ const MUSEI = [
    intro:'L\'orologio astronomico del 1499 che segna ore, fasi lunari e segni zodiacali sopra l\'ingresso delle Mercerie.',
    inside:['Il meccanismo dell\'orologio, ancora funzionante','I due Mori di bronzo che battono le ore','La terrazza in cima, con vista sulla Piazza'],
    tip:'Consigliata dal vostro amico: salite fino al tetto e vedete la Piazza dall\'alto. Nei vostri giorni le visite sono in inglese (lunedì alle 14, martedì e mercoledì alle 12 e alle 14); in italiano solo lunedì alle 12. Ritrovo alla biglietteria del Correr 5 minuti prima.', url:'https://torreorologio.visitmuve.it'},
+  {id:'m-querini', kind:'priv', name:'Fondazione Querini Stampalia', area:'Castello · Campo Santa Maria Formosa, vicino alla Libreria Acqua Alta', lat:45.43678, lng:12.34134, ico:'🏛',
+   open:['n','y','y','y'], hours:'Mar–dom 10–18, biglietteria fino alle 17:30. Chiusa il lunedì.', ticket:'Compresa nel vostro City Pass.',
+   intro:'Il palazzo dei Querini, lasciato alla città dall\'ultimo conte nel 1869: una casa-museo veneziana ancora arredata, più uno dei capolavori dell\'architetto Carlo Scarpa.',
+   inside:['Il piano terra e il giardino ridisegnati da Carlo Scarpa (1963): pietra, acqua del canale che entra nel palazzo, luce','La casa-museo al secondo piano, con mobili, porcellane e lampadari originali','Le scene di vita veneziana di Pietro Longhi e la <i>Presentazione di Gesù al Tempio</i> di Giovanni Bellini','La collezione Intesa Sanpaolo nelle sale di Michele De Lucchi'],
+   tip:'Nel programma mercoledì mattina, subito dopo la Libreria Acqua Alta (sono a 2 minuti).', url:'https://www.querinistampalia.org'},
+  {id:'m-carmini', kind:'priv', name:'Scuola Grande dei Carmini', area:'Dorsoduro · Campo Santa Margherita', lat:45.43410, lng:12.32250, ico:'✨',
+   open:['y','y','y','y'], hours:'Tutti i giorni, in inverno circa 11–16 (verificate prima di andare).', ticket:'Compresa nel vostro City Pass.',
+   intro:'La sede di un\'antica confraternita, con le sale barocche di Longhena intatte.',
+   inside:['Il soffitto del salone dipinto da Giambattista Tiepolo, con la Madonna del Carmelo','Lo scalone a stucchi dorati','Le sale dell\'Albergo e dell\'Archivio, con pavimenti in marmo e soffitti decorati'],
+   tip:'Non è nel programma: è lontana dal vostro percorso. Se vi avanza un\'ora, è uno dei soffitti più belli di Venezia.', url:'https://www.scuolagrandecarmini.it'},
   {id:'accademia', pl:'accademia', kind:'stat', name:'Gallerie dell\'Accademia', area:'Dorsoduro · fermata Accademia (linee 1 e 2)', open:['n','y','y','y'],
    hours:'Riaprono il 12 novembre. Mar–dom 9–19, biglietteria fino alle 18. Chiuse il lunedì.', ticket:'€ 15 (cittadini UE 18–25 anni € 2, gratis sotto i 18).',
    intro:'Il più importante museo di pittura veneziana: cinque secoli di arte, dal Trecento al Settecento.',
@@ -1005,15 +1025,17 @@ $('#food-chips').addEventListener('click', e=>{ const b=e.target.closest('[data-
 
 /* ============ MUSEI ============ */
 let musDay=-1;
+const PASS_IDS=['ducale','fenice','m-correr','m-rezzonico','m-pesaro','m-mocenigo','m-goldoni','m-fortuny','m-storianat','m-vetro','m-merletto','m-torcello','m-querini','m-carmini'];
+const IN_PLAN=['ducale','fenice','m-vetro','m-merletto','m-querini'];
 function renderMusei(){
   const L=['Lun 16','Mar 17','Mer 18'];
-  const list=MUSEI.filter(m=>musDay<0 || m.open[musDay]!=='n');
+  const list=MUSEI.filter(m=>musDay===-1 || (musDay===-2 ? PASS_IDS.includes(m.id) : m.open[musDay]!=='n'));
   $('#mus-list').innerHTML = list.map(m=>{ const p = m.pl ? byId(m.pl) : byId(m.id);
-    const tag = m.closed ? '<span class="tag chiuso">Chiuso per lavori</span>' : `<span class="tag ${m.kind}">${m.kind==='civ'?'Museo civico':'Museo statale'}</span>`;
+    const tag = (m.closed ? '<span class="tag chiuso">Chiuso per lavori</span>' : `<span class="tag ${m.kind}">${m.kind==='civ'?'Museo civico':m.kind==='stat'?'Museo statale':'Fondazione'}</span>`) + (PASS_IDS.includes(m.id)?' <span class="tag pass">🎟️ Nel vostro pass</span>':'') + (IN_PLAN.includes(m.id)?' <span class="tag inplan">Nel programma</span>':'');
     return `<div class="card mus-card${m.closed?' closed':''}">${tag}<h3>${esc(m.name)}</h3><div class="where">${esc(m.area)}</div>
       <p style="margin:0 0 6px;font-size:14px">${m.intro}</p>
       <div class="small" style="font-weight:800;margin-top:4px">Cosa c'è dentro</div><ul>${m.inside.map(x=>`<li>${x}</li>`).join('')}</ul>
-      <div class="kv2"><b>Orari:</b> ${esc(m.hours)}</div>${m.ticket?`<div class="kv2"><b>Biglietto:</b> ${esc(m.ticket)}</div>`:''}
+      <div class="kv2"><b>Orari:</b> ${esc(m.hours)}</div>${(()=>{ const t = PASS_IDS.includes(m.id) ? 'Compreso nel vostro City Pass.'+(m.id==='ducale'?' Gli Itinerari Segreti sono a parte (€ 40).':m.id==='fenice'?' L\'opera si paga a parte.':'') : m.ticket; return t?`<div class="kv2"><b>Biglietto:</b> ${esc(t)}</div>`:''; })()}
       <div class="wk">${m.open.slice(0,3).map((o,i)=>`<span class="${o}">${L[i]} ${o==='y'?'✓':o==='n'?'✕':'?'}</span>`).join('')}</div>
       ${m.tip?`<div class="note small" style="margin-bottom:10px">💡 ${m.tip}</div>`:''}
       <div class="row">${p?`<a class="btn go" href="${gmaps(p)}" target="_blank" rel="noopener">${ICON_GO}Portami qui</a><button class="btn map" data-focus="${p.id}">${ICON_PIN}Sulla mappa</button>`:''}<a class="btn ghost" href="${m.url}" target="_blank" rel="noopener">Sito ufficiale</a></div></div>`; }).join('') || '<div class="card small">Nessun museo aperto quel giorno.</div>';
