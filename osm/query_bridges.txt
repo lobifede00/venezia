@@ -1,0 +1,6 @@
+[out:json][timeout:180];
+(
+  way["man_made"="bridge"](45.405,12.29,45.50,12.44);
+  way["man_made"="pier"](45.405,12.29,45.50,12.44);
+);
+out geom;
