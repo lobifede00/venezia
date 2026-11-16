@@ -1,30 +1,30 @@
 {
- "updated": "15 nov, 07:05",
- "note": "Fonti: 3BMeteo (15 nov ore 06:47), iLMeteo (15 nov ore 06:40-06:59) e Centro Meteo Italiano (15 nov ore 03:14). Lunedì pioggia solo all'alba, poi nubi sparse. Martedì le fonti divergono (3BMeteo e Meteored danno pioggia debole, CMI solo nuvoloso): scelta la più prudente. Mercoledì asciutto per tutte, nebbie al mattino. Centro Maree (14 nov ore 13:30): lunedì 90 cm alle 13:40, mercoledì 100 cm alle 6:30; martedì non ancora emessa.",
+ "updated": "16 nov, 06:54",
+ "note": "Fonti: Meteored/iLMeteo.net (16 nov), iLMeteo.it (15 nov ore 20:55), 3BMeteo (15 nov ore 07:29), Centro Meteo Italiano (15 nov ore 09:43) e ARPAV. Lunedì tutte danno pioggia debole solo al mattino, poi nubi sparse. Martedì accordo su pioggia debole (ARPAV dal pomeriggio). Mercoledì asciutto per tutte. Centro Maree (14 nov ore 13:30): lunedì 90 cm alle 13:40, martedì 85 cm alle 7:40, mercoledì 100 cm alle 6:30.",
  "days": [
   {
    "d": "Lun 16",
-   "ico": "⛅",
-   "min": 7,
+   "ico": "🌦️",
+   "min": 8,
    "max": 11,
-   "sky": "Pioggia all'alba, poi nubi sparse",
-   "tip": "All'arrivo dovrebbe già essere asciutto: Canal Grande in vaporetto, poi Palazzo Ducale e San Marco. Tramonto sul Bacino verso le 16:40, possibile tra le nubi. Marea ~90 cm alle 13:40: angoli bassi della Piazza bagnati."
+   "sky": "Pioviggine al mattino, poi nubi sparse",
+   "tip": "All'arrivo possibile ancora qualche goccia: ombrello pieghevole per il Canal Grande in vaporetto, poi Palazzo Ducale e San Marco al coperto. Tramonto sul Bacino alle 16:39, tra le nubi. Marea ~90 cm alle 13:40: angoli bassi della Piazza bagnati."
   },
   {
    "d": "Mar 17",
    "ico": "🌧️",
    "min": 7,
-   "max": 11,
+   "max": 10,
    "sky": "Nuvoloso con pioggia debole",
-   "tip": "Giornata più grigia e umida: k-way, scarpe impermeabili e strati caldi per le ore in barca in laguna. A Murano privilegiate fornaci e Museo del Vetro al coperto."
+   "tip": "Giornata grigia e umida, pioggia soprattutto dal pomeriggio: uscite presto per la laguna, con k-way, scarpe impermeabili e strati caldi per le ore in barca. A Murano fornaci e Museo del Vetro al coperto."
   },
   {
    "d": "Mer 18",
    "ico": "⛅",
    "min": 8,
-   "max": 13,
-   "sky": "Nebbie al mattino, poi nubi e schiarite",
-   "tip": "Asciutto, buono per la Biennale ai Giardini. Marea prevista 100 cm alle 6:30: se uscite presto evitate San Marco, entro le 9 cala. Bagagli in deposito e margine per il treno dopo le 13."
+   "max": 12,
+   "sky": "Nubi sparse, asciutto",
+   "tip": "Asciutto e un po' più mite, buono per la Biennale ai Giardini. Marea prevista 100 cm alle 6:30: se uscite presto evitate San Marco, entro le 9 cala. Bagagli in deposito e margine per il treno dopo le 13."
   }
  ]
 }
