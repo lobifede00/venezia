@@ -1,6 +1,6 @@
 {
- "updated": "16 nov, 06:54",
- "note": "Fonti: Meteored/iLMeteo.net (16 nov), iLMeteo.it (15 nov ore 20:55), 3BMeteo (15 nov ore 07:29), Centro Meteo Italiano (15 nov ore 09:43) e ARPAV. Lunedì tutte danno pioggia debole solo al mattino, poi nubi sparse. Martedì accordo su pioggia debole (ARPAV dal pomeriggio). Mercoledì asciutto per tutte. Centro Maree (14 nov ore 13:30): lunedì 90 cm alle 13:40, martedì 85 cm alle 7:40, mercoledì 100 cm alle 6:30.",
+ "updated": "17 nov, 06:55",
+ "note": "Fonti: iLMeteo.it (17 nov ore 06:48) e 3BMeteo Venezia Centro (17 nov ore 06:45), con Meteored (16 nov). Martedì tutte d'accordo su pioggia debole dal pomeriggio (3 mm circa), più persistente in serata secondo iLMeteo. Mercoledì asciutto con nubi sparse per tutte. Centro Maree (16 nov ore 17): martedì 85 cm alle 8:30, mercoledì 105 cm alle 6:30. Lunedì lasciato com'era.",
  "days": [
   {
    "d": "Lun 16",
@@ -15,8 +15,8 @@
    "ico": "🌧️",
    "min": 7,
    "max": 10,
-   "sky": "Nuvoloso con pioggia debole",
-   "tip": "Giornata grigia e umida, pioggia soprattutto dal pomeriggio: uscite presto per la laguna, con k-way, scarpe impermeabili e strati caldi per le ore in barca. A Murano fornaci e Museo del Vetro al coperto."
+   "sky": "Coperto, pioggia debole dal pomeriggio",
+   "tip": "Mattina asciutta ma grigia: andate presto a Murano e tornate verso le 13, quando inizia a piovere. Pomeriggio e sera al coperto (Frari, Fenice): ombrello, k-way e scarpe impermeabili. Marea 85 cm alle 8:30, nessun problema."
   },
   {
    "d": "Mer 18",
@@ -24,7 +24,7 @@
    "min": 8,
    "max": 12,
    "sky": "Nubi sparse, asciutto",
-   "tip": "Asciutto e un po' più mite, buono per la Biennale ai Giardini. Marea prevista 100 cm alle 6:30: se uscite presto evitate San Marco, entro le 9 cala. Bagagli in deposito e margine per il treno dopo le 13."
+   "tip": "Acqua alta prevista 105 cm alle 6:30: se uscite presto evitate San Marco e le rive basse, verso le 9 cala. Poi asciutto e mite per la Biennale ai Giardini; bagagli in deposito e margine per il treno dopo le 13."
   }
  ]
 }
