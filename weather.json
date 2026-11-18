@@ -1,6 +1,6 @@
 {
- "updated": "17 nov, 06:55",
- "note": "Fonti: iLMeteo.it (17 nov ore 06:48) e 3BMeteo Venezia Centro (17 nov ore 06:45), con Meteored (16 nov). Martedì tutte d'accordo su pioggia debole dal pomeriggio (3 mm circa), più persistente in serata secondo iLMeteo. Mercoledì asciutto con nubi sparse per tutte. Centro Maree (16 nov ore 17): martedì 85 cm alle 8:30, mercoledì 105 cm alle 6:30. Lunedì lasciato com'era.",
+ "updated": "18 nov, 06:55",
+ "note": "Fonti: iLMeteo.it (18 nov ore 06:38) e Meteored (17 nov ore 11:38), d'accordo su mercoledì asciutto, coperto al mattino e schiarite dal primo pomeriggio; scartata una fonte che dava sereno e 16 °C. Centro Maree (18 nov ore 4:30): massimo 95 cm alle 6:30, sotto la soglia dei 100 cm. Lunedì e martedì lasciati com'erano.",
  "days": [
   {
    "d": "Lun 16",
@@ -23,8 +23,8 @@
    "ico": "⛅",
    "min": 8,
    "max": 12,
-   "sky": "Nubi sparse, asciutto",
-   "tip": "Acqua alta prevista 105 cm alle 6:30: se uscite presto evitate San Marco e le rive basse, verso le 9 cala. Poi asciutto e mite per la Biennale ai Giardini; bagagli in deposito e margine per il treno dopo le 13."
+   "sky": "Coperto al mattino, poi schiarite",
+   "tip": "Marea 95 cm alle 6:30: presto qualche punto basso di San Marco bagnato, verso le 9 è già calata. Mattina grigia ma asciutta per la Biennale ai Giardini (giacca, 8-10 °C); bagagli in deposito e margine per il treno dopo le 13."
   }
  ]
 }
